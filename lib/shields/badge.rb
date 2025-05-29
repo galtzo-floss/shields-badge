@@ -48,6 +48,11 @@ module Shields
     SUBBER_UNDER = /(\p{UPPERCASE-LETTER})/
     INITIAL_UNDERSCORE = /^_/
 
+    def register_all
+      require_relative "register_all"
+    end
+    module_function :register_all
+
     # Badges will be registered lazily, so that they can be used without loading the entire set.
     def register(klass:)
       raise Errors::Error, "Badge class must be a class, but is #{klass.class}" unless klass.is_a?(Class)

@@ -27,4 +27,4 @@ end
 # This gem
 require "shields/badge"
 
-require "shields/register_all"
+Shields::Badge.register_all
