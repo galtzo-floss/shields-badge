@@ -81,6 +81,42 @@ If you use a discrete gem version it should also work fine!
 
 ### Quick Usage Example for AI and Copy / Pasting
 
+Do you ever lay awake at night thinking?
+
+- How is the CI looking for `kettle-soup-cover`? [![kettle-rb/kettle-soup-cover check runs (branch: main)](https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?)](https://github.com/kettle-rb/kettle-soup-cover/actions)
+- What is the current coverage on `oauth2` gem? [![oauth-xx/oauth2 test coverage](https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?)](https://github.com/oauth-xx/oauth2/actions)
+- How many commits have there been since last release of `gem_bench`? [![pboling/gem_bench commits since latest release](https://img.shields.io/github/commits-since/pboling/gem_bench/latest?)](https://github.com/pboling/gem_bench/releases)
+- What is the download rank (all time) for `anonymous_active_record`? [![RubyGems Download Rank](https://img.shields.io/gem/rt/anonymous_active_record?)](https://rubygems.org/gems/anonymous_active_record)
+- What is the download rank (today) for `sanitize_email`? [![RubyGems Download Rank](https://img.shields.io/gem/rd/sanitize_email?)](https://rubygems.org/gems/sanitize_email)
+- What are the total downloads of `rubocop-lts`? [![RubyGems Total Downloads](https://img.shields.io/gem/dt/rubocop-lts?)](https://rubygems.org/gems/rubocop-lts)
+- How many stars does `flag_shih_tzu` have? [![GitHub Stars](https://img.shields.io/github/stars/pboling/flag_shih_tzu?)](https:///github.com/pboling/flag_shih_tzu/stargazers)
+
+Or maybe you want to build a dashboard of badges for all your projects...
+
+For the badges that have been implemented, all options on Shields.io are available.
+
+```ruby
+# Optional: Eager load all badges (otherwise they will load the first time called through method_missing)
+Shields::Badge.register_all
+
+# All Path Parameters are supported
+Shields::Badge.github_branch_check_runs(path_parameters: {user: "kettle-rb", repo: "kettle-soup-cover", branch: "main"})
+# => "[![kettle-rb/kettle-soup-cover check runs (branch: main)](https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?)](https://github.com/kettle-rb/kettle-soup-cover/actions)"
+Shields::Badge.coveralls(path_parameters: {user: "oauth-xx", repo: "oauth2", vcs_type: "github"})
+# => "[![oauth-xx/oauth2 test coverage](https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?)](https://github.com/oauth-xx/oauth2/actions)"
+Shields::Badge.github_commits_since_latest_release(path_parameters: {user: "pboling", repo: "gem_bench"})
+# => "[![pboling/gem_bench commits since latest release](https://img.shields.io/github/commits-since/pboling/gem_bench/latest?)](https://github.com/pboling/gem_bench/releases)"
+Shields::Badge.gem_download_rank(path_parameters: {period: "rt", gem: "anonymous_active_record"})
+# => "[![RubyGems Download Rank](https://img.shields.io/gem/rt/anonymous_active_record?)](https://rubygems.org/gems/anonymous_active_record)"
+Shields::Badge.gem_download_rank(path_parameters: {gem: "sanitize_email", period: "rd"})
+# => "[![RubyGems Download Rank](https://img.shields.io/gem/rd/sanitize_email?)](https://rubygems.org/gems/sanitize_email)"
+Shields::Badge.gem_total_downloads(path_parameters: {gem: "rubocop-lts"})
+# => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/rubocop-lts?)](https://rubygems.org/gems/rubocop-lts)"
+Shields::Badge.github_repo_stars(path_parameters: {user: "pboling", repo: "flag_shih_tzu"})
+# => "[![GitHub Stars](https://img.shields.io/github/stars/pboling/flag_shih_tzu?)](https:///github.com/pboling/flag_shih_tzu/stargazers)"
+
+# All Query Parameters are supported; check Usage section below.
+```
 
 ## 💡 Info you can shake a stick at
 
@@ -88,7 +124,7 @@ If you use a discrete gem version it should also work fine!
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Works with JRuby        | [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎10-j-wf] [![JRuby 10.0 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                        |
 | Works with Truffle Ruby | [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                                                                                                |
-| Works with MRI Ruby 3   | [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                         |
+| Works with MRI Ruby 3   | [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                                      |
 | Source                  | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                                                                                                         |
 | Documentation           | [![Discussion][⛳gg-discussions-img]][⛳gg-discussions] [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] [![BDFL Blog][🚂bdfl-blog-img]][🚂bdfl-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                                                                                                                  |
 | Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver]                                                                                                                                                                                                                    |
@@ -198,7 +234,49 @@ See [SECURITY.md][🔐security].
 
 ## 🔧 Basic Usage
 
+### Setup
 
+Require the library (if this gem is in your `Gemfile` bundler will do this for you):
+
+```ruby
+require "shields/badge"
+```
+
+#### Prefer method_missing or eager load?
+
+The first time they are invoked, the badge generation methods on `Shields::Badge` will automatically require the badge tooling they need to generate a badge. If you want to avoid `method_missing`, you can eager load all the badges with `Shields::Badge.register_all`.
+
+### Path Parameters
+
+These are generally required arguments and vary from badge to badge.
+
+See the specs for examples.  There is a spec for every badge, and at least one spec that utilizes every available path parameter.
+
+### Query Parameters
+
+Most of these are optional arguments, but the odd one is required.
+
+See the specs for examples.  There is a spec for every badge, and at least one spec that utilizes every available query parameter.
+
+### Formatters
+
+Shields.io has 5 output formats.  Of those, 2 have been implemented here, and PRs are welcome for the remainder.
+
+|             | URL                             | Markdown                  | rSt | AsciiDoc | HTML |
+|-------------|---------------------------------|---------------------------|-----|----------|------|
+| Implemented | 💚                              | 💚                        | ⏳️  | ⏳️       | ⏳️   |
+| Module      | `...::ImageSrcUrl`              | `...::Markdown`           | ⏳️  | ⏳️       | ⏳️   |
+| Source      | [image_src_url.rb][fmt-url-src] | [markdown.rb][fmt-md-src] | ⏳️  | ⏳️       | ⏳️   |
+
+[fmt-url-src]: https://github.com/galtzo-floss/shields-badge/blob/main/lib/shields/formatter/image_src_url.rb
+[fmt-md-src]: https://github.com/galtzo-floss/shields-badge/blob/main/lib/shields/formatter/markdown.rb
+
+**Legend**
+
+- `...` => `Shields::Formatters`
+- `⏳️` => Please submit a Pull Request to implement this formatter
+
+Check the sources of the two that are done.  They are _very_ easy to write.  This is a great project to get started with open source, because it is well tested, and patterned after the Shields.io website.
 
 ## 🔐 Security
 
