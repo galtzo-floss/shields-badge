@@ -46,6 +46,26 @@ RSpec.describe Shields::Badge::Downloads::GemTotalDownloads do
     end
   end
 
+  context "with camel case query parameters" do
+    let(:query_parameters) {
+      {
+        style: "flat",
+        logo: "github",
+        logoColor: "yellow",
+        logoSize: "auto",
+        label: "banana",
+        labelColor: "blue",
+        color: "black",
+        cacheSeconds: "3600",
+        link: "https://example.com/green/red",
+      }
+    }
+
+    it "generates a badge" do
+      expect(badger).to eq("[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)")
+    end
+  end
+
   context "with invalid cache_seconds" do
     let(:query_parameters) {
       {
