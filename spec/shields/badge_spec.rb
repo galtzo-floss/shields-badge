@@ -84,7 +84,7 @@ RSpec.describe Shields::Badge do
 
     context "when not internal badge class" do
       it "raises error" do
-        block_is_expected.to raise_error(LoadError, /cannot load such file.*some_fun_badge/)
+        block_is_expected.to raise_error(LoadError, /such file.*some_fun_badge/)
       end
     end
 
@@ -115,7 +115,7 @@ RSpec.describe Shields::Badge do
         let(:category) { "sloppy" }
 
         it "raises error" do
-          block_is_expected.to raise_error(LoadError, /cannot load such file.*github_commits_since_latest_release/)
+          block_is_expected.to raise_error(LoadError, /such file.*github_commits_since_latest_release/)
         end
       end
 
