@@ -14,7 +14,7 @@
   "spec/shields/badge/downloads/gem_download_rank_spec.rb:3797629898": [
     [3, 1, 57, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2897063730]
   ],
-  "spec/shields/badge/downloads/gem_total_downloads_spec.rb:1310701287": [
+  "spec/shields/badge/downloads/gem_total_downloads_spec.rb:2024682997": [
     [3, 1, 59, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 792672309]
   ],
   "spec/shields/badge/social/github_repo_stars_spec.rb:9649459": [

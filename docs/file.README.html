@@ -298,7 +298,8 @@ Shields::Badge.github_repo_stars(path_parameters: {user: &quot;pboling&quot;, re
     </tr>
     <tr>
       <td>Documentation</td>
-      <td>[![Discussion][⛳gg-discussions-img]][⛳gg-discussions] <a href="http://rubydoc.info/gems/shields-badge"><img src="https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="Current release on RubyDoc.info"></a> <a href="https://shields-badge.galtzo.com"><img src="https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="HEAD on RubyDoc.info"></a> <a href="http://www.railsbling.com/tags/shields-badge"><img src="https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&amp;logo=rubyonrails&amp;logoColor=orange" alt="BDFL Blog"></a> <a href="https://gitlab.com/galtzo-floss/shields-badge/-/wikis/home"><img src="https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&amp;logo=Wiki&amp;logoColor=white" alt="Wiki"></a>
+      <td>
+<a href="http://rubydoc.info/gems/shields-badge"><img src="https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="Current release on RubyDoc.info"></a> <a href="https://shields-badge.galtzo.com"><img src="https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="HEAD on RubyDoc.info"></a> <a href="http://www.railsbling.com/tags/shields-badge"><img src="https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&amp;logo=rubyonrails&amp;logoColor=orange" alt="BDFL Blog"></a> <a href="https://gitlab.com/galtzo-floss/shields-badge/-/wikis/home"><img src="https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&amp;logo=Wiki&amp;logoColor=white" alt="Wiki"></a>
 </td>
     </tr>
     <tr>
@@ -452,6 +453,11 @@ See <a href="file.SECURITY.html" title="SECURITY.md">SECURITY.md</a>.</p>
 
 <h2 id="-basic-usage">🔧 Basic Usage</h2>
 
+<p>All parameters are in snake case when passing as Ruby arguments.<br>
+Certain parameters are configured to serialize as camel case (lower first) when formatted.<br>
+This is all automatic, and you don’t need to worry about it.<br>
+You can even supply the parameters in camel case (lower first) if you want.</p>
+
 <h3 id="setup">Setup</h3>
 
 <p>Require the library (if this gem is in your <code>Gemfile</code> bundler will do this for you):</p>
@@ -473,7 +479,47 @@ See <a href="file.SECURITY.html" title="SECURITY.md">SECURITY.md</a>.</p>
 
 <p>Most of these are optional arguments, but the odd one is required.</p>
 
-<p>See the specs for examples.  There is a spec for every badge, and at least one spec that utilizes every available query parameter.</p>
+<p>The query parameters that all badges share are:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">path_parameters = {gem: &quot;orange&quot;}
+query_parameters = {
+  style: &quot;flat&quot;,
+  logo: &quot;github&quot;,
+  logo_color: &quot;yellow&quot;,
+  logo_size: &quot;auto&quot;,
+  label: &quot;banana&quot;,
+  label_color: &quot;blue&quot;,
+  color: &quot;black&quot;,
+  cache_seconds: &quot;3600&quot;,
+  link: &quot;https://example.com/green/red&quot;,
+}
+Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+</code></pre>
+
+<p>All the optional values supported by Shields.io are supported.  Some badges have additional query parameters.</p>
+
+<p>For the arguments that are designated as camel case (lower first) on Shields.io, it doesn’t matter if you supply the arguments in camel case (lower first) or snake case, as they will both work.</p>
+
+<p>The above snake case arguments result in the same badge as the below camel case arguments:</p>
+
+<pre class="code language-ruby"><code class="language-ruby">path_parameters = {gem: &quot;orange&quot;}
+query_parameters = {
+  style: &quot;flat&quot;,
+  logo: &quot;github&quot;,
+  logoColor: &quot;yellow&quot;,
+  logoSize: &quot;auto&quot;,
+  label: &quot;banana&quot;,
+  labelColor: &quot;blue&quot;,
+  color: &quot;black&quot;,
+  cacheSeconds: &quot;3600&quot;,
+  link: &quot;https://example.com/green/red&quot;,
+}
+Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+</code></pre>
+
+<p>See the specs for more examples.  There is a spec for every badge, and at least one spec that utilizes every available query parameter.</p>
 
 <h3 id="formatters">Formatters</h3>
 
@@ -663,7 +709,7 @@ CodeCov currently fails to parse the coverage upload.
 </div></div>
 
       <div id="footer">
-  Generated on Fri May 30 04:59:11 2025 by
+  Generated on Fri May 30 05:58:50 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>
