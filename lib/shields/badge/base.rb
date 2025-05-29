@@ -68,7 +68,7 @@ module Shields
       end
 
       def base_url
-        raise Error, "Unknown image type: #{image_type} must be one of #{BASE_URL.keys}" unless BASE_URL.key?(image_type)
+        raise Errors::Error, "Unknown image type: #{image_type} must be one of #{BASE_URL.keys}" unless BASE_URL.key?(image_type)
 
         BASE_URL[image_type]
       end

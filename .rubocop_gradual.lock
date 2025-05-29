@@ -5,6 +5,9 @@
   "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:3076130790": [
     [3, 1, 72, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2636382098]
   ],
+  "spec/shields/badge/base_spec.rb:604195255": [
+    [52, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 2385281194]
+  ],
   "spec/shields/badge/build/github_branch_check_runs_spec.rb:194599170": [
     [3, 1, 59, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2845648675]
   ],
@@ -20,7 +23,7 @@
   "spec/shields/badge/social/github_repo_stars_spec.rb:9649459": [
     [3, 1, 54, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 3080664873]
   ],
-  "spec/shields/badge_spec.rb:2727752054": [
+  "spec/shields/badge_spec.rb:1678622166": [
     [100, 7, 27, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1094119267],
     [113, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1532675665],
     [122, 7, 31, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 4115370646]

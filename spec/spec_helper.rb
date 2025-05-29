@@ -27,4 +27,7 @@ end
 # This gem
 require "shields/badge"
 
+# RSpec Support Files
+require_relative "support/fixtures/bogus_badge"
+
 Shields::Badge.register_all
