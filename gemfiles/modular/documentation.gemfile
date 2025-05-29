@@ -1,0 +1,4 @@
+# frozen_string_literal: true
+
+# Documentation
+gem "yard-junk", "~> 0.0", ">= 0.0.10", github: "pboling/yard-junk", branch: "next", require: false
