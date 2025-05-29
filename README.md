@@ -32,7 +32,6 @@ Read more about <a href="https://shields.io/blog/token-pool">how it works</a>.
 | 🧪 [galtzo-floss/shields-badge on GitLab][📜src-gl]   | The Truth                                                         | [💚][🤝gl-issues]         | [💚][🤝gl-pulls]         | [💚][📜wiki]              | 🏀 Tiny Matrix           | ➖                            |
 | 🧊 [galtzo-floss/shields-badge on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate])                         | ➖                         | [💚][🤝cb-pulls]         | ➖                         | ⭕️ No Matrix             | ➖                            |
 | 🐙 [galtzo-floss/shields-badge on GitHub][📜src-gh]   | A Dirty Mirror                                                    | [💚][🤝gh-issues]         | [💚][🤝gh-pulls]         | ➖                         | 💯 Full Matrix           | ➖                            |
-| 🤼 [OAuth Ruby Google Group][⛳gg-discussions]         | "Active"                                                          | ➖                         | ➖                        | ➖                         | ➖                        | [💚][⛳gg-discussions]        |
 | 🎮️ [Discord Server][✉️discord-invite]                | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
 
 ### Upgrading Runtime Gem Dependencies
@@ -279,7 +278,7 @@ the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency("shields-badge", "~> 2.0")
+spec.add_dependency("shields-badge", "~> 1.0")
 ```
 
 See [CHANGELOG.md][📌changelog] for list of releases.
