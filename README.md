@@ -12,7 +12,7 @@
 
 # 📛 Shields::Badge
 
-[![Version][👽versioni]][👽version] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![Depfu][🔑depfui♻️]][🔑depfu] [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls] [![QLTY Test Coverage][🔑qlty-covi♻️]][🔑qlty-cov] [![QLTY Maintainability][🔑qlty-mnti♻️]][🔑qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf] [![CI Ancient][🚎1-an-wfi]][🚎1-an-wf] [![CI Caboose is an absolute WAGON][🚎13-cbs-wfi]][🚎13-cbs-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL]
+[![Version][👽versioni]][👽version] [![License: MIT][📄license-img]][📄license-ref] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![Open Source Helpers][👽oss-helpi]][👽oss-help] [![Depfu][🔑depfui♻️]][🔑depfu] [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls] [![QLTY Test Coverage][🔑qlty-covi♻️]][🔑qlty-cov] [![QLTY Maintainability][🔑qlty-mnti♻️]][🔑qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![CI Supported][🚎6-s-wfi]][🚎6-s-wf] [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![CodeQL][🖐codeQL-img]][🖐codeQL]
 
 ---
 
@@ -369,19 +369,17 @@ or one of the others at the head of this README.
 [👽version]: https://rubygems.org/gems/shields-badge
 [👽versioni]: https://img.shields.io/gem/v/shields-badge.svg
 [🔑qlty-mnt]: https://qlty.sh/gh/galtzo-floss/projects/shields-badge
-[🔑qlty-mnti♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/maintainability.svg
+[🔑qlty-mnti♻️]: https://qlty.sh/badges/35dfa7f0-ac27-4223-b35a-2b5561e495b5/maintainability.svg
 [🔑qlty-cov]: https://qlty.sh/gh/galtzo-floss/projects/shields-badge
-[🔑qlty-covi♻️]: https://qlty.sh/badges/d3370c2c-8791-4202-9759-76f527f76005/test_coverage.svg
+[🔑qlty-covi♻️]: https://qlty.sh/badges/35dfa7f0-ac27-4223-b35a-2b5561e495b5/test_coverage.svg
 [🔑codecov]: https://codecov.io/gh/galtzo-floss/shields-badge
 [🔑codecovi♻️]: https://codecov.io/gh/galtzo-floss/shields-badge/graph/badge.svg?token=bNqSzNiuo2
 [🔑coveralls]: https://coveralls.io/github/galtzo-floss/shields-badge?branch=main
 [🔑coveralls-img]: https://coveralls.io/repos/github/galtzo-floss/shields-badge/badge.svg?branch=main
-[🔑depfu]: https://depfu.com/github/galtzo-floss/shields-badge?project_id=5884
-[🔑depfui♻️]: https://badges.depfu.com/badges/6d34dc1ba682bbdf9ae2a97848241743/count.svg
+[🔑depfu]: https://depfu.com/github/galtzo-floss/shields-badge?project_id=63700
+[🔑depfui♻️]: https://badges.depfu.com/badges/e77d4201589e563af3c7bef975e5cd0b/count.svg
 [🖐codeQL]: https://github.com/galtzo-floss/shields-badge/security/code-scanning
 [🖐codeQL-img]: https://github.com/galtzo-floss/shields-badge/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎1-an-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/ancient.yml
-[🚎1-an-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/ancient.yml/badge.svg
 [🚎2-cov-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/coverage.yml
 [🚎2-cov-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/coverage.yml/badge.svg
 [🚎3-hd-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/heads.yml
@@ -392,10 +390,6 @@ or one of the others at the head of this README.
 [🚎5-st-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/style.yml/badge.svg
 [🚎6-s-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/supported.yml
 [🚎6-s-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/supported.yml/badge.svg
-[🚎7-us-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/unsupported.yml
-[🚎7-us-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/unsupported.yml/badge.svg
-[🚎8-ho-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/hoary.yml
-[🚎8-ho-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/hoary.yml/badge.svg
 [🚎9-t-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/truffle.yml
 [🚎9-t-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/truffle.yml/badge.svg
 [🚎10-j-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/jruby.yml
@@ -404,8 +398,6 @@ or one of the others at the head of this README.
 [🚎11-c-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current.yml/badge.svg
 [🚎12-crh-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current-runtime-heads.yml
 [🚎12-crh-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current-runtime-heads.yml/badge.svg
-[🚎13-cbs-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/caboose.yml
-[🚎13-cbs-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/caboose.yml/badge.svg
 [⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
