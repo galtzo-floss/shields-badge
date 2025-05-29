@@ -15,8 +15,8 @@ require_relative "label_text_template"
 require_relative "categories"
 
 # Formatters
-require_relative "formatter/markdown"
-require_relative "formatter/image_src_url"
+require_relative "formatters/markdown"
+require_relative "formatters/image_src_url"
 
 # Serializers
 require_relative "serializers/camel_caser"
@@ -66,7 +66,7 @@ module Shields
         # Please write an AsciiDoc formatter and submit a PR!
         # Please write an HTML formatter and submit a PR!
         when :image_src_url, :markdown
-          Shields::Formatter.const_get(underscore_to_classy(as))
+          Shields::Formatters.const_get(underscore_to_classy(as))
         else
           raise Errors::Error, "Unknown formatter: #{as}"
         end
@@ -97,7 +97,7 @@ module Shields
     def method_missing(method_name, **kwargs, &block)
       super unless register_by_method_name(method_name:)
 
-      send(clean_method, **kwargs)
+      send(method_name, **kwargs)
     end
     module_function :method_missing
 

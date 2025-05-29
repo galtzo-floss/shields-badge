@@ -4,7 +4,7 @@ RSpec.describe Shields::Badge::Social::GithubRepoStars do
   subject(:badger) { instance.format(formatter) }
 
   let(:instance) { described_class.new(**args) }
-  let(:formatter) { Shields::Formatter::Markdown }
+  let(:formatter) { Shields::Formatters::Markdown }
   let(:args) {
     {
       path_parameters:,
@@ -19,7 +19,7 @@ RSpec.describe Shields::Badge::Social::GithubRepoStars do
   end
 
   context "with image src url formatter" do
-    let(:formatter) { Shields::Formatter::ImageSrcUrl }
+    let(:formatter) { Shields::Formatters::ImageSrcUrl }
 
     it "generates an image src url" do
       expect(badger).to eq("https://img.shields.io/github/stars/green/red?")

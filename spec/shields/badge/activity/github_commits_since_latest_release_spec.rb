@@ -4,7 +4,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
   subject(:badger) { instance.format(formatter) }
 
   let(:instance) { described_class.new(**args) }
-  let(:formatter) { Shields::Formatter::Markdown }
+  let(:formatter) { Shields::Formatters::Markdown }
   let(:args) {
     {
       path_parameters:,
@@ -15,14 +15,14 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
   let(:query_parameters) { {} }
 
   it "generates a badge" do
-    expect(badger).to eq("[![green/red commits since latest release](https://img.shields.io/github/commits-since-latest-release/green/red?)](https://github.com/green/red/releases)")
+    expect(badger).to eq("[![green/red commits since latest release](https://img.shields.io/github/commits-since/green/red/latest?)](https://github.com/green/red/releases)")
   end
 
   context "with image src url formatter" do
-    let(:formatter) { Shields::Formatter::ImageSrcUrl }
+    let(:formatter) { Shields::Formatters::ImageSrcUrl }
 
     it "generates an image src url" do
-      expect(badger).to eq("https://img.shields.io/github/commits-since-latest-release/green/red?")
+      expect(badger).to eq("https://img.shields.io/github/commits-since/green/red/latest?")
     end
   end
 
@@ -45,7 +45,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
     }
 
     it "generates a badge" do
-      expect(badger).to eq("[![green/red commits since latest release](https://img.shields.io/github/commits-since-latest-release/green/red?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred&include_prereleases=false&sort=semver&filter=*)](https://github.com/green/red/releases)")
+      expect(badger).to eq("[![green/red commits since latest release](https://img.shields.io/github/commits-since/green/red/latest?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred&include_prereleases=false&sort=semver&filter=*)](https://github.com/green/red/releases)")
     end
   end
 

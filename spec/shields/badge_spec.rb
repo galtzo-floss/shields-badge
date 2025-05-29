@@ -144,14 +144,14 @@ RSpec.describe Shields::Badge do
     end
 
     it "returns a markdown badge" do
-      expect(badge_method).to eq("[![galtzo-floss/shields-badge commits since latest release](https://img.shields.io/github/commits-since-latest-release/galtzo-floss/shields-badge?)](https://github.com/galtzo-floss/shields-badge/releases)")
+      expect(badge_method).to eq("[![galtzo-floss/shields-badge commits since latest release](https://img.shields.io/github/commits-since/galtzo-floss/shields-badge/latest?)](https://github.com/galtzo-floss/shields-badge/releases)")
     end
 
     context "with img_src_url for as" do
       let(:args) { {path_parameters: {user: "galtzo-floss", repo: "shields-badge"}, as: :image_src_url} }
 
       it "returns a badge image url" do
-        expect(badge_method).to eq("https://img.shields.io/github/commits-since-latest-release/galtzo-floss/shields-badge?")
+        expect(badge_method).to eq("https://img.shields.io/github/commits-since/galtzo-floss/shields-badge/latest?")
       end
     end
   end

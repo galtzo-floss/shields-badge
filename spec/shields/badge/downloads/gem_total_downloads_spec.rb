@@ -12,14 +12,14 @@ RSpec.describe Shields::Badge::Downloads::GemTotalDownloads do
   }
   let(:path_parameters) { {gem: "orange"} }
   let(:query_parameters) { {} }
-  let(:formatter) { Shields::Formatter::Markdown }
+  let(:formatter) { Shields::Formatters::Markdown }
 
   it "generates a badge" do
     expect(badger).to eq("[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?)](https://rubygems.org/gems/orange)")
   end
 
   context "with image src url formatter" do
-    let(:formatter) { Shields::Formatter::ImageSrcUrl }
+    let(:formatter) { Shields::Formatters::ImageSrcUrl }
 
     it "generates an image src url" do
       expect(badger).to eq("https://img.shields.io/gem/dt/orange?")

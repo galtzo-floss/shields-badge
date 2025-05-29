@@ -215,6 +215,51 @@ If you use a discrete gem version it should also work fine!
 
 <h3 id="quick-usage-example-for-ai-and-copy--pasting">Quick Usage Example for AI and Copy / Pasting</h3>
 
+<p>Do you ever lay awake at night thinking?</p>
+
+<ul>
+  <li>How is the CI looking for <code>kettle-soup-cover</code>? <a href="https://github.com/kettle-rb/kettle-soup-cover/actions"><img src="https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?" alt="kettle-rb/kettle-soup-cover check runs (branch: main)"></a>
+</li>
+  <li>What is the current coverage on <code>oauth2</code> gem? <a href="https://github.com/oauth-xx/oauth2/actions"><img src="https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?" alt="oauth-xx/oauth2 test coverage"></a>
+</li>
+  <li>How many commits have there been since last release of <code>gem_bench</code>? <a href="https://github.com/pboling/gem_bench/releases"><img src="https://img.shields.io/github/commits-since/pboling/gem_bench/latest?" alt="pboling/gem_bench commits since latest release"></a>
+</li>
+  <li>What is the download rank (all time) for <code>anonymous_active_record</code>? <a href="https://rubygems.org/gems/anonymous_active_record"><img src="https://img.shields.io/gem/rt/anonymous_active_record?" alt="RubyGems Download Rank"></a>
+</li>
+  <li>What is the download rank (today) for <code>sanitize_email</code>? <a href="https://rubygems.org/gems/sanitize_email"><img src="https://img.shields.io/gem/rd/sanitize_email?" alt="RubyGems Download Rank"></a>
+</li>
+  <li>What are the total downloads of <code>rubocop-lts</code>? <a href="https://rubygems.org/gems/rubocop-lts"><img src="https://img.shields.io/gem/dt/rubocop-lts?" alt="RubyGems Total Downloads"></a>
+</li>
+  <li>How many stars does <code>flag_shih_tzu</code> have? <a href="https:///github.com/pboling/flag_shih_tzu/stargazers"><img src="https://img.shields.io/github/stars/pboling/flag_shih_tzu?" alt="GitHub Stars"></a>
+</li>
+</ul>
+
+<p>Or maybe you want to build a dashboard of badges for all your projects…</p>
+
+<p>For the badges that have been implemented, all options on Shields.io are available.</p>
+
+<pre class="code language-ruby"><code class="language-ruby"># Optional: Eager load all badges (otherwise they will load the first time called through method_missing)
+Shields::Badge.register_all
+
+# All Path Parameters are supported
+Shields::Badge.github_branch_check_runs(path_parameters: {user: &quot;kettle-rb&quot;, repo: &quot;kettle-soup-cover&quot;, branch: &quot;main&quot;})
+# =&gt; &quot;[![kettle-rb/kettle-soup-cover check runs (branch: main)](https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?)](https://github.com/kettle-rb/kettle-soup-cover/actions)&quot;
+Shields::Badge.coveralls(path_parameters: {user: &quot;oauth-xx&quot;, repo: &quot;oauth2&quot;, vcs_type: &quot;github&quot;})
+# =&gt; &quot;[![oauth-xx/oauth2 test coverage](https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?)](https://github.com/oauth-xx/oauth2/actions)&quot;
+Shields::Badge.github_commits_since_latest_release(path_parameters: {user: &quot;pboling&quot;, repo: &quot;gem_bench&quot;})
+# =&gt; &quot;[![pboling/gem_bench commits since latest release](https://img.shields.io/github/commits-since/pboling/gem_bench/latest?)](https://github.com/pboling/gem_bench/releases)&quot;
+Shields::Badge.gem_download_rank(path_parameters: {period: &quot;rt&quot;, gem: &quot;anonymous_active_record&quot;})
+# =&gt; &quot;[![RubyGems Download Rank](https://img.shields.io/gem/rt/anonymous_active_record?)](https://rubygems.org/gems/anonymous_active_record)&quot;
+Shields::Badge.gem_download_rank(path_parameters: {gem: &quot;sanitize_email&quot;, period: &quot;rd&quot;})
+# =&gt; &quot;[![RubyGems Download Rank](https://img.shields.io/gem/rd/sanitize_email?)](https://rubygems.org/gems/sanitize_email)&quot;
+Shields::Badge.gem_total_downloads(path_parameters: {gem: &quot;rubocop-lts&quot;})
+# =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/rubocop-lts?)](https://rubygems.org/gems/rubocop-lts)&quot;
+Shields::Badge.github_repo_stars(path_parameters: {user: &quot;pboling&quot;, repo: &quot;flag_shih_tzu&quot;})
+# =&gt; &quot;[![GitHub Stars](https://img.shields.io/github/stars/pboling/flag_shih_tzu?)](https:///github.com/pboling/flag_shih_tzu/stargazers)&quot;
+
+# All Query Parameters are supported; check Usage section below.
+</code></pre>
+
 <h2 id="-info-you-can-shake-a-stick-at">💡 Info you can shake a stick at</h2>
 
 <table>
@@ -407,6 +452,64 @@ See <a href="file.SECURITY.html" title="SECURITY.md">SECURITY.md</a>.</p>
 
 <h2 id="-basic-usage">🔧 Basic Usage</h2>
 
+<h3 id="setup">Setup</h3>
+
+<p>Require the library (if this gem is in your <code>Gemfile</code> bundler will do this for you):</p>
+
+<pre class="code language-ruby"><code class="language-ruby">require &quot;shields/badge&quot;
+</code></pre>
+
+<h4 id="prefer-method_missing-or-eager-load">Prefer method_missing or eager load?</h4>
+
+<p>The first time they are invoked, the badge generation methods on <code>Shields::Badge</code> will automatically require the badge tooling they need to generate a badge. If you want to avoid <code>method_missing</code>, you can eager load all the badges with <code>Shields::Badge.register_all</code>.</p>
+
+<h3 id="path-parameters">Path Parameters</h3>
+
+<p>These are generally required arguments and vary from badge to badge.</p>
+
+<p>See the specs for examples.  There is a spec for every badge, and at least one spec that utilizes every available path parameter.</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p>Most of these are optional arguments, but the odd one is required.</p>
+
+<p>See the specs for examples.  There is a spec for every badge, and at least one spec that utilizes every available query parameter.</p>
+
+<h3 id="formatters">Formatters</h3>
+
+<p>Shields.io has 5 output formats.  Of those, 2 have been implemented here, and PRs are welcome for the remainder.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>URL</th>
+      <th>Markdown</th>
+      <th>rSt</th>
+      <th>AsciiDoc</th>
+      <th>HTML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Implemented</td>
+      <td>💚</td>
+      <td>💚</td>
+      <td>⏳️</td>
+      <td>⏳️</td>
+      <td>⏳️</td>
+    </tr>
+    <tr>
+      <td>Module</td>
+      <td>Shields::Formatters::ImageSrcUrl</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="-security">🔐 Security</h2>
 
 <p>See <a href="file.SECURITY.html" title="SECURITY.md">SECURITY.md</a>.</p>
@@ -540,7 +643,7 @@ CodeCov currently fails to parse the coverage upload.
 </div></div>
 
       <div id="footer">
-  Generated on Fri May 30 03:33:44 2025 by
+  Generated on Fri May 30 04:48:07 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>

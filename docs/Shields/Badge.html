@@ -364,7 +364,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_register_by_method_name'>register_by_method_name</span><span class='lparen'>(</span><span class='label'>method_name:</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_clean_method'>clean_method</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -500,7 +500,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_register_by_method_name'>register_by_method_name</span><span class='lparen'>(</span><span class='label'>method_name:</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_clean_method'>clean_method</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -581,7 +581,7 @@
 </span>    <span class='comment'># Please write an AsciiDoc formatter and submit a PR!
 </span>    <span class='comment'># Please write an HTML formatter and submit a PR!
 </span>    <span class='kw'>when</span> <span class='symbol'>:image_src_url</span><span class='comma'>,</span> <span class='symbol'>:markdown</span>
-      <span class='const'><span class='object_link'><a href="../Shields.html" title="Shields (module)">Shields</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Formatter.html" title="Shields::Formatter (module)">Formatter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_as'>as</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Shields.html" title="Shields (module)">Shields</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Formatters.html" title="Shields::Formatters (module)">Formatters</a></span></span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_as'>as</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>else</span>
       <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Errors.html" title="Shields::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors/Error.html" title="Shields::Errors::Error (class)">Error</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown formatter: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_as'>as</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
@@ -799,7 +799,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 30 03:33:44 2025 by
+  Generated on Fri May 30 04:48:07 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>
