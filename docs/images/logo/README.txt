@@ -1,4 +1,8 @@
-Galtzo.com Logos - galtzo-floss-logo.svg & galtzo-floss-logo-wordless.svg
+Galtzo.com Logos
+- galtzo-floss-logos-original.svg
+- galtzo-floss-logos-wordless.svg
+- galtzo-floss-logos-250px-original.png
+- galtzo-floss-logos-250px-wordless.png
 
 © 2025 by Aboling0 (https://github.com/Aboling0)
 

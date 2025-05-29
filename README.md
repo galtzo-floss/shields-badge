@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://discord.gg/3qme4XHNKN" target="_blank" rel="noopener">
-      <img src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/galtzo-floss-logo.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
+      <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/galtzo-floss-logos-original.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
     </a>
     <a href="https://shields.io" target="_blank" rel="noopener">
-      <img src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/shields-logo-200px.png?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
+      <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/shields-logo-200px.png?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
     </a>
     <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
       <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/ruby-logo-198px.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
@@ -298,7 +298,7 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
         <a href="https://discord.gg/3qme4XHNKN">
             Galtzo.com
             <picture>
-              <img src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/galtzo-floss-logo-wordless.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0" height="20">
+              <img src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/galtzo-floss-logos-wordless.svg?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0" height="20">
             </picture>
         </a>, and shields-badge contributors
     </li>
