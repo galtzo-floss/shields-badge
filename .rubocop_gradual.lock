@@ -24,7 +24,7 @@
   "spec/shields/badge/social/github_repo_stars_spec.rb:9649459": [
     [3, 1, 54, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 3080664873]
   ],
-  "spec/shields/badge_spec.rb:3362733379": [
+  "spec/shields/badge_spec.rb:2505032925": [
     [32, 7, 34, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 3961210097],
     [122, 7, 27, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1094119267],
     [135, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1532675665],
