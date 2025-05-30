@@ -12,13 +12,19 @@ and this project adheres to [Semantic Versioning v2](https://semver.org/spec/v2.
 ### Fixed
 ### Security
 
-## [1.0.0] - 2025-05-23
+## [1.0.0] - 2025-05-29
 - TAG: [v1.0.0][1.0.0t]
-- Line Coverage: 98.28% (342 / 348)
-- Branch Coverage: 68.75% (22 / 32)
-- 27.35% documented
+- Line Coverage: 99.45% (360 / 362)
+- Branch Coverage: 94.29% (33 / 35)
+27.12% documented
 ### Added
-- Badge: Activity - GithubCommitsSinceLatestRelease
+- Initial release
+- Badge: Activity - `GithubCommitsSinceLatestRelease`
+- Badge: Build - `GithubBranchCheckRuns`
+- Badge: Code Coverage - `Coveralls`
+- Badge: Downloads - `GemDownloadsRank`
+- Badge: Downloads - `GemTotalDownloads`
+- Badge: Social - `GithubRepoStars`
 
 [Unreleased]: https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...HEAD
 [1.0.0]: https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...v1.0.0
