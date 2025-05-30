@@ -30,12 +30,18 @@ module Shields
         :anchor_params,
         :label
 
-      def initialize(path_parameters:, query_parameters: {}, image_type: "svg", **options)
+      def initialize(path_parameters: {}, query_parameters: {}, image_type: "svg", **options)
+        if path_parameters.nil? || path_parameters.empty?
+          path_parameters = extract_top_level_options(options, self.class::PathDto)
+        end
+        if query_parameters.nil? || query_parameters.empty?
+          query_parameters = extract_top_level_options(options, self.class::QueryDto)
+        end
         self.path_parameters = self.class::PathDto.new(**path_parameters)
         self.query_parameters = self.class::QueryDto.new(**query_parameters)
         self.image_type = image_type
         self.anchor_href = options.fetch(:anchor_href, nil)
-        self.anchor_params = options.fetch(anchor_params, {})
+        self.anchor_params = options.fetch(:anchor_params, {})
         self.label = options.fetch(:label, nil)
       end
 
@@ -47,6 +53,13 @@ module Shields
       end
 
       protected
+
+      def extract_top_level_options(options, dto_klass)
+        path_dto_klass = dto_klass
+        main_args = path_dto_klass.attributes.keys
+        args_for_dto = path_dto_klass.attributes.values.each_with_object(main_args) { |at, arr| arr.concat(at.options[:aliases].map(&:to_sym)) }
+        options.select { |k, _v| args_for_dto.include?(k) }
+      end
 
       # Formatted string specification template
       # See: https://ruby-doc.org/3.4.1/String.html#method-i-25

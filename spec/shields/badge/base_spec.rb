@@ -56,6 +56,21 @@ RSpec.describe Shields::Badge::Base do
           block_is_expected.to raise_error(Shields::Errors::Error, %{Unknown image type:  must be one of ["svg", "png"]})
         end
       end
+
+      context "when all parameters are top-level" do
+        let(:query_parameters) { {logoColor: "yellow"} }
+        let(:args) {
+          {
+            **path_parameters,
+            **query_parameters,
+            image_type: image_type,
+          }
+        }
+
+        it "has working base_url caller" do
+          expect(base_url_caller).to eq("https://img.shields.io/bogus/green/red?logoColor=yellow")
+        end
+      end
     end
   end
 end

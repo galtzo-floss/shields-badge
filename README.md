@@ -100,19 +100,19 @@ For the badges that have been implemented, all options on Shields.io are availab
 Shields::Badge.register_all
 
 # All Path Parameters are supported
-Shields::Badge.github_branch_check_runs(path_parameters: {user: "kettle-rb", repo: "kettle-soup-cover", branch: "main"})
+Shields::Badge.github_branch_check_runs(user: "kettle-rb", repo: "kettle-soup-cover", branch: "main")
 # => "[![kettle-rb/kettle-soup-cover check runs (branch: main)](https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?)](https://github.com/kettle-rb/kettle-soup-cover/actions)"
-Shields::Badge.coveralls(path_parameters: {user: "oauth-xx", repo: "oauth2", vcs_type: "github"})
+Shields::Badge.coveralls(user: "oauth-xx", repo: "oauth2", vcs_type: "github")
 # => "[![oauth-xx/oauth2 test coverage](https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?)](https://github.com/oauth-xx/oauth2/actions)"
-Shields::Badge.github_commits_since_latest_release(path_parameters: {user: "pboling", repo: "gem_bench"})
+Shields::Badge.github_commits_since_latest_release(user: "pboling", repo: "gem_bench")
 # => "[![pboling/gem_bench commits since latest release](https://img.shields.io/github/commits-since/pboling/gem_bench/latest?)](https://github.com/pboling/gem_bench/releases)"
-Shields::Badge.gem_download_rank(path_parameters: {period: "rt", gem: "anonymous_active_record"})
+Shields::Badge.gem_download_rank(period: "rt", gem: "anonymous_active_record")
 # => "[![RubyGems Download Rank](https://img.shields.io/gem/rt/anonymous_active_record?)](https://rubygems.org/gems/anonymous_active_record)"
-Shields::Badge.gem_download_rank(path_parameters: {gem: "sanitize_email", period: "rd"})
+Shields::Badge.gem_download_rank(gem: "sanitize_email", period: "rd")
 # => "[![RubyGems Download Rank](https://img.shields.io/gem/rd/sanitize_email?)](https://rubygems.org/gems/sanitize_email)"
-Shields::Badge.gem_total_downloads(path_parameters: {gem: "rubocop-lts"})
+Shields::Badge.gem_total_downloads(gem: "rubocop-lts")
 # => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/rubocop-lts?)](https://rubygems.org/gems/rubocop-lts)"
-Shields::Badge.github_repo_stars(path_parameters: {user: "pboling", repo: "flag_shih_tzu"})
+Shields::Badge.github_repo_stars(user: "pboling", repo: "flag_shih_tzu")
 # => "[![GitHub Stars](https://img.shields.io/github/stars/pboling/flag_shih_tzu?)](https:///github.com/pboling/flag_shih_tzu/stargazers)"
 
 # All Query Parameters are supported; check Usage section below.
@@ -276,7 +276,10 @@ query_parameters = {
   cache_seconds: "3600",
   link: "https://example.com/green/red",
 }
+# NOTE: You can specify path and query parameters separately, or as top-level arguments.
 Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+Shields::Badge.gem_total_downloads(**path_parameters, **query_parameters)
 # => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
 ```
 
@@ -300,6 +303,10 @@ query_parameters = {
   link: "https://example.com/green/red",
 }
 Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+
+# And again it doesn't matter if the arguments are top-level or nested inside path and query parameters:
+Shields::Badge.gem_total_downloads(**path_parameters, **query_parameters)
 # => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&logo=github&logoColor=yellow&logoSize=auto&label=banana&labelColor=blue&color=black&cacheSeconds=3600&link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
 ```
 

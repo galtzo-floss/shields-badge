@@ -27,9 +27,12 @@ Gem::Specification.new do |spec|
   gl_homepage = "https://gitlab.com/galtzo-floss/shields-badge"
   gh_mirror = "https://github.com/galtzo-floss/shields-badge"
 
-  spec.summary = "RubyGem CLI version of the interactive tool found at shields.io/badges"
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "RubyGem version of the interactive tool found at shields.io/badges"
+  spec.description = <<~DESC
+    Shields::Badge.gem_total_downloads(path_parameters: {gem: 'rails'})
+    => "[![RubyGems Total Downloads](https://img.shields.io/gem/dt/rails?)](https://rubygems.org/gems/rails)"
+  DESC
+  spec.homepage = gh_mirror
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
@@ -39,7 +42,7 @@ Gem::Specification.new do |spec|
   spec.metadata["bug_tracker_uri"] = "#{gl_homepage}/-/issues"
   spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
   spec.metadata["wiki_uri"] = "#{gl_homepage}/-/wiki"
-  spec.metadata["funding_uri"] = "https://liberapay.com/pboling"
+  spec.metadata["funding_uri"] = "https://github.com/sponsors/pboling"
   spec.metadata["news_uri"] = "https://www.railsbling.com/tags/#{spec.name}"
   spec.metadata["rubygems_mfa_required"] = "true"
 
