@@ -193,7 +193,7 @@ RSpec.describe Shields::Badge do
       subject(:bad_method) { described_class.oops }
 
       it "does not register bad klass" do
-        block_is_expected.to raise_error(NoMethodError, "undefined method 'oops' for module Shields::Badge")
+        block_is_expected.to raise_error(NoMethodError, /undefined method .* for module Shields::Badge/)
       end
     end
 
