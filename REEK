@@ -6,16 +6,21 @@ lib/shields/badge/activity/github_commits_since_latest_release.rb -- 3 warnings:
   [9]:IrresponsibleModule: Shields::Badge::Activity::GithubCommitsSinceLatestRelease::PathDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
   [14]:IrresponsibleModule: Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
   [24, 28, 32]:UncommunicativeVariableName: Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryDto has the variable name 'v' [https://github.com/troessner/reek/blob/v6.5.0/docs/Uncommunicative-Variable-Name.md]
-lib/shields/badge/base.rb -- 9 warnings:
+lib/shields/badge/base.rb -- 14 warnings:
   [29]:Attribute: Shields::Badge::Base#anchor_href is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
   [30]:Attribute: Shields::Badge::Base#anchor_params is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
   [28]:Attribute: Shields::Badge::Base#image_type is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
   [31]:Attribute: Shields::Badge::Base#label is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
   [26]:Attribute: Shields::Badge::Base#path_parameters is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
   [27]:Attribute: Shields::Badge::Base#query_parameters is a writable attribute [https://github.com/troessner/reek/blob/v6.5.0/docs/Attribute.md]
-  [34, 35]:DuplicateMethodCall: Shields::Badge::Base#initialize calls 'self.class' 2 times [https://github.com/troessner/reek/blob/v6.5.0/docs/Duplicate-Method-Call.md]
-  [43, 44]:FeatureEnvy: Shields::Badge::Base#format refers to 'formatter' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Feature-Envy.md]
+  [59, 60]:DuplicateMethodCall: Shields::Badge::Base#extract_top_level_options calls 'path_dto_klass.attributes' 2 times [https://github.com/troessner/reek/blob/v6.5.0/docs/Duplicate-Method-Call.md]
+  [35, 38, 40, 41]:DuplicateMethodCall: Shields::Badge::Base#initialize calls 'self.class' 4 times [https://github.com/troessner/reek/blob/v6.5.0/docs/Duplicate-Method-Call.md]
+  [49, 50]:FeatureEnvy: Shields::Badge::Base#format refers to 'formatter' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Feature-Envy.md]
   [5]:IrresponsibleModule: Shields::Badge::Base has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
+  [34, 37]:NilCheck: Shields::Badge::Base#initialize performs a nil-check [https://github.com/troessner/reek/blob/v6.5.0/docs/Nil-Check.md]
+  [57]:TooManyStatements: Shields::Badge::Base#extract_top_level_options has approx 6 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
+  [61]:UncommunicativeVariableName: Shields::Badge::Base#extract_top_level_options has the variable name 'k' [https://github.com/troessner/reek/blob/v6.5.0/docs/Uncommunicative-Variable-Name.md]
+  [57]:UtilityFunction: Shields::Badge::Base#extract_top_level_options doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Utility-Function.md]
 lib/shields/badge/build/github_branch_check_runs.rb -- 2 warnings:
   [9]:IrresponsibleModule: Shields::Badge::Build::GithubBranchCheckRuns::PathDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
   [15]:IrresponsibleModule: Shields::Badge::Build::GithubBranchCheckRuns::QueryDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
@@ -34,11 +39,11 @@ lib/shields/badge/social/github_repo_stars.rb -- 2 warnings:
   [9]:IrresponsibleModule: Shields::Badge::Social::GithubRepoStars::PathDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
   [14]:IrresponsibleModule: Shields::Badge::Social::GithubRepoStars::QueryDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
 lib/shields/badge.rb -- 5 warnings:
-  [104]:BooleanParameter: Shields::Badge#respond_to_missing? has boolean parameter 'include_private' [https://github.com/troessner/reek/blob/v6.5.0/docs/Boolean-Parameter.md]
+  [120]:BooleanParameter: Shields::Badge#respond_to_missing? has boolean parameter 'include_private' [https://github.com/troessner/reek/blob/v6.5.0/docs/Boolean-Parameter.md]
   [45]:IrresponsibleModule: Shields::Badge has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
-  [126]:TooManyStatements: Shields::Badge#classy_to_underscore has approx 6 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
+  [142]:TooManyStatements: Shields::Badge#classy_to_underscore has approx 6 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
   [57]:TooManyStatements: Shields::Badge#register has approx 9 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
-  [79]:TooManyStatements: Shields::Badge#register_by_method_name has approx 8 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
+  [79]:TooManyStatements: Shields::Badge#register_by_method_name has approx 12 statements [https://github.com/troessner/reek/blob/v6.5.0/docs/Too-Many-Statements.md]
 lib/shields/categories.rb -- 1 warning:
   [2]:IrresponsibleModule: Shields::Categories has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
 lib/shields/errors/error.rb -- 1 warning:
@@ -73,6 +78,10 @@ lib/shields/serializers/camel_caser.rb -- 3 warnings:
   [28]:UtilityFunction: Shields::Serializers::CamelCaser#camel_case doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Utility-Function.md]
 spec/shields/badge_spec.rb -- 1 warning:
   [9]:UtilityFunction: format doesn't depend on instance state (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Utility-Function.md]
+spec/support/fixtures/bogus_badge.rb -- 3 warnings:
+  [1]:IrresponsibleModule: BogusBadge has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
+  [2]:IrresponsibleModule: BogusBadge::PathDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
+  [7]:IrresponsibleModule: BogusBadge::QueryDto has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
 .yard_gfm_support.rb -- 1 warning:
   [9, 9]:FeatureEnvy: KramdownGfmDocument#initialize refers to 'options' more than self (maybe move it to another class?) [https://github.com/troessner/reek/blob/v6.5.0/docs/Feature-Envy.md]
-52 total warnings
+60 total warnings

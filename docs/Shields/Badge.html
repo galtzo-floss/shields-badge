@@ -109,12 +109,12 @@
         <dt id="SAFE_TO_CLASSIFY-constant" class="">SAFE_TO_CLASSIFY =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}_]{1,511}</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A[\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}_]{1,511}\Z</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="SAFE_TO_UNDERSCORE-constant" class="">SAFE_TO_UNDERSCORE =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\p{UPPERCASE-LETTER}\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}]{1,256}</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A[\p{UPPERCASE-LETTER}\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}]{1,256}\Z</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="SUBBER_UNDER-constant" class="">SUBBER_UNDER =
           
@@ -352,14 +352,14 @@
       <pre class="lines">
 
 
-97
-98
-99
-100
-101</pre>
+113
+114
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_register_by_method_name'>register_by_method_name</span><span class='lparen'>(</span><span class='label'>method_name:</span><span class='rparen'>)</span>
@@ -402,7 +402,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Error</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Errors/Error.html" title="Shields::Errors::Error (class)">Errors::Error</a></span></tt>)</span>
       
       
       
@@ -416,21 +416,21 @@
       <pre class="lines">
 
 
-126
-127
-128
-129
-130
-131
-132
-133</pre>
+142
+143
+144
+145
+146
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_classy_to_underscore'>classy_to_underscore</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_safe'>safe</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#SAFE_TO_UNDERSCORE-constant" title="Shields::Badge::SAFE_TO_UNDERSCORE (constant)">SAFE_TO_UNDERSCORE</a></span></span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Error</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid badge class must match </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#SAFE_TO_UNDERSCORE-constant" title="Shields::Badge::SAFE_TO_UNDERSCORE (constant)">SAFE_TO_UNDERSCORE</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe'>safe</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe'>safe</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>) != </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>255</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_safe'>safe</span> <span class='op'>==</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="Errors.html" title="Shields::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors/Error.html" title="Shields::Errors::Error (class)">Error</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid badge class must match </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#SAFE_TO_UNDERSCORE-constant" title="Shields::Badge::SAFE_TO_UNDERSCORE (constant)">SAFE_TO_UNDERSCORE</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe'>safe</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe'>safe</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>) != </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>255</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_safe'>safe</span> <span class='op'>==</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
 
   <span class='id identifier rubyid_underscored'>underscored</span> <span class='op'>=</span> <span class='id identifier rubyid_safe'>safe</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#SUBBER_UNDER-constant" title="Shields::Badge::SUBBER_UNDER (constant)">SUBBER_UNDER</a></span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='backref'>$1</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_shifted_leading_underscore'>shifted_leading_underscore</span> <span class='op'>=</span> <span class='id identifier rubyid_underscored'>underscored</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#INITIAL_UNDERSCORE-constant" title="Shields::Badge::INITIAL_UNDERSCORE (constant)">INITIAL_UNDERSCORE</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -456,13 +456,13 @@
       <pre class="lines">
 
 
-112
-113
-114
-115</pre>
+128
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clean_method_name'>clean_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_safe_classy'>safe_classy</span> <span class='op'>=</span> <span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
@@ -488,14 +488,14 @@
       <pre class="lines">
 
 
-97
-98
-99
-100
-101</pre>
+113
+114
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_register_by_method_name'>register_by_method_name</span><span class='lparen'>(</span><span class='label'>method_name:</span><span class='rparen'>)</span>
@@ -654,7 +654,23 @@
 91
 92
 93
-94</pre>
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 79</span>
@@ -663,17 +679,33 @@
   <span class='comment'># send it through the conversion to ensure it is clean
 </span>  <span class='comment'># IMPORTANT: use the same logic as respond_to_missing?
 </span>  <span class='id identifier rubyid_klass_name'>klass_name</span><span class='comma'>,</span> <span class='id identifier rubyid_clean_method'>clean_method</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_method_name'>clean_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_klass_name'>klass_name</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_clean_method'>clean_method</span> <span class='op'>==</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
-
+  <span class='comment'># This code should be unreachable, but it is here for completeness
+</span>  <span class='comment'># :nocov:
+</span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_klass_name'>klass_name</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_clean_method'>clean_method</span> <span class='op'>==</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+  <span class='comment'># :nocov:
+</span>
   <span class='id identifier rubyid_category'>category</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Categories.html" title="Shields::Categories (module)">Categories</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_clean_method'>clean_method</span><span class='rbracket'>]</span>
   <span class='comment'># method_name must also match the file name
 </span>  <span class='id identifier rubyid_file_parts'>file_parts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>badge</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_category'>category</span><span class='comma'>,</span> <span class='id identifier rubyid_clean_method'>clean_method</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
   <span class='id identifier rubyid_file_extension'>file_extension</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_file_parts'>file_parts</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_require_relative'>require_relative</span><span class='lparen'>(</span><span class='id identifier rubyid_file_extension'>file_extension</span><span class='rparen'>)</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_require_relative'>require_relative</span><span class='lparen'>(</span><span class='id identifier rubyid_file_extension'>file_extension</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shields::Badge::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass_name'>klass_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shields::Badge::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass_name'>klass_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='label'>klass:</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='label'>klass:</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'>LoadError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_error'>error</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_file_extension'>file_extension</span><span class='rparen'>)</span>
+      <span class='comment'># rescue is so method_missing, which likely called this method, can do its thing.
+</span>      <span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not load </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file_extension'>file_extension</span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass_name'>klass_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='kw'>__FILE__</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='kw'>__LINE__</span><span class='embexpr_end'>}</span><span class='tstring_content'>.\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='comment'># This code should be unreachable, but it is here for completeness
+</span>      <span class='comment'># :nocov:
+</span>      <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error'>error</span>
+      <span class='comment'># :nocov:
+</span>    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -718,13 +750,13 @@
       <pre class="lines">
 
 
-104
-105
-106
-107</pre>
+120
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_klass_name'>klass_name</span><span class='comma'>,</span> <span class='id identifier rubyid_clean_method'>clean_method</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_method_name'>clean_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
@@ -773,15 +805,15 @@
       <pre class="lines">
 
 
-118
-119
-120
-121
-122
-123</pre>
+134
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/shields/badge.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_underscore_to_classy'>underscore_to_classy</span><span class='lparen'>(</span><span class='id identifier rubyid_underscored'>underscored</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_safe'>safe</span> <span class='op'>=</span> <span class='id identifier rubyid_underscored'>underscored</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#SAFE_TO_CLASSIFY-constant" title="Shields::Badge::SAFE_TO_CLASSIFY (constant)">SAFE_TO_CLASSIFY</a></span></span><span class='rbracket'>]</span>
@@ -799,7 +831,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 30 06:25:09 2025 by
+  Generated on Fri May 30 08:41:00 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>

@@ -2,19 +2,20 @@
   "bin/bundle:247448467": [
     [64, 5, 20, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 2485198147]
   ],
-  "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:3076130790": [
+  "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:2773732759": [
     [3, 1, 72, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2636382098]
   ],
-  "spec/shields/badge/base_spec.rb:604195255": [
-    [52, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 2385281194]
+  "spec/shields/badge/base_spec.rb:1704987070": [
+    [52, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 2385281194],
+    [60, 7, 43, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 2215636243]
   ],
   "spec/shields/badge/build/github_branch_check_runs_spec.rb:194599170": [
     [3, 1, 59, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2845648675]
   ],
-  "spec/shields/badge/code_coverage/coveralls_spec.rb:3469215413": [
+  "spec/shields/badge/code_coverage/coveralls_spec.rb:693929769": [
     [3, 1, 54, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 3781367172]
   ],
-  "spec/shields/badge/downloads/gem_download_rank_spec.rb:3797629898": [
+  "spec/shields/badge/downloads/gem_download_rank_spec.rb:2218949551": [
     [3, 1, 57, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2897063730]
   ],
   "spec/shields/badge/downloads/gem_total_downloads_spec.rb:2024682997": [
@@ -23,10 +24,11 @@
   "spec/shields/badge/social/github_repo_stars_spec.rb:9649459": [
     [3, 1, 54, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 3080664873]
   ],
-  "spec/shields/badge_spec.rb:1678622166": [
-    [100, 7, 27, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1094119267],
-    [113, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1532675665],
-    [122, 7, 31, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 4115370646]
+  "spec/shields/badge_spec.rb:4126306084": [
+    [32, 7, 34, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 3961210097],
+    [122, 7, 27, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1094119267],
+    [135, 7, 33, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 1532675665],
+    [148, 7, 31, "RSpec/NestedGroups: Maximum example group nesting exceeded [4/3].", 4115370646]
   ],
   "spec/shields/serializers/camel_caser_spec.rb:3369980502": [
     [31, 7, 482, "RSpec/ExampleLength: Example has too many lines. [15/5]", 3282197783]

@@ -242,19 +242,19 @@ If you use a discrete gem version it should also work fine!
 Shields::Badge.register_all
 
 # All Path Parameters are supported
-Shields::Badge.github_branch_check_runs(path_parameters: {user: &quot;kettle-rb&quot;, repo: &quot;kettle-soup-cover&quot;, branch: &quot;main&quot;})
+Shields::Badge.github_branch_check_runs(user: &quot;kettle-rb&quot;, repo: &quot;kettle-soup-cover&quot;, branch: &quot;main&quot;)
 # =&gt; &quot;[![kettle-rb/kettle-soup-cover check runs (branch: main)](https://img.shields.io/github/check-runs/kettle-rb/kettle-soup-cover/main?)](https://github.com/kettle-rb/kettle-soup-cover/actions)&quot;
-Shields::Badge.coveralls(path_parameters: {user: &quot;oauth-xx&quot;, repo: &quot;oauth2&quot;, vcs_type: &quot;github&quot;})
+Shields::Badge.coveralls(user: &quot;oauth-xx&quot;, repo: &quot;oauth2&quot;, vcs_type: &quot;github&quot;)
 # =&gt; &quot;[![oauth-xx/oauth2 test coverage](https://img.shields.io/coverallsCoverage/github/oauth-xx/oauth2?)](https://github.com/oauth-xx/oauth2/actions)&quot;
-Shields::Badge.github_commits_since_latest_release(path_parameters: {user: &quot;pboling&quot;, repo: &quot;gem_bench&quot;})
+Shields::Badge.github_commits_since_latest_release(user: &quot;pboling&quot;, repo: &quot;gem_bench&quot;)
 # =&gt; &quot;[![pboling/gem_bench commits since latest release](https://img.shields.io/github/commits-since/pboling/gem_bench/latest?)](https://github.com/pboling/gem_bench/releases)&quot;
-Shields::Badge.gem_download_rank(path_parameters: {period: &quot;rt&quot;, gem: &quot;anonymous_active_record&quot;})
+Shields::Badge.gem_download_rank(period: &quot;rt&quot;, gem: &quot;anonymous_active_record&quot;)
 # =&gt; &quot;[![RubyGems Download Rank](https://img.shields.io/gem/rt/anonymous_active_record?)](https://rubygems.org/gems/anonymous_active_record)&quot;
-Shields::Badge.gem_download_rank(path_parameters: {gem: &quot;sanitize_email&quot;, period: &quot;rd&quot;})
+Shields::Badge.gem_download_rank(gem: &quot;sanitize_email&quot;, period: &quot;rd&quot;)
 # =&gt; &quot;[![RubyGems Download Rank](https://img.shields.io/gem/rd/sanitize_email?)](https://rubygems.org/gems/sanitize_email)&quot;
-Shields::Badge.gem_total_downloads(path_parameters: {gem: &quot;rubocop-lts&quot;})
+Shields::Badge.gem_total_downloads(gem: &quot;rubocop-lts&quot;)
 # =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/rubocop-lts?)](https://rubygems.org/gems/rubocop-lts)&quot;
-Shields::Badge.github_repo_stars(path_parameters: {user: &quot;pboling&quot;, repo: &quot;flag_shih_tzu&quot;})
+Shields::Badge.github_repo_stars(user: &quot;pboling&quot;, repo: &quot;flag_shih_tzu&quot;)
 # =&gt; &quot;[![GitHub Stars](https://img.shields.io/github/stars/pboling/flag_shih_tzu?)](https:///github.com/pboling/flag_shih_tzu/stargazers)&quot;
 
 # All Query Parameters are supported; check Usage section below.
@@ -493,7 +493,10 @@ query_parameters = {
   cache_seconds: &quot;3600&quot;,
   link: &quot;https://example.com/green/red&quot;,
 }
+# NOTE: You can specify path and query parameters separately, or as top-level arguments.
 Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+Shields::Badge.gem_total_downloads(**path_parameters, **query_parameters)
 # =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
 </code></pre>
 
@@ -516,6 +519,10 @@ query_parameters = {
   link: &quot;https://example.com/green/red&quot;,
 }
 Shields::Badge.gem_total_downloads(path_parameters:, query_parameters:)
+# =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
+
+# And again it doesn&#39;t matter if the arguments are top-level or nested inside path and query parameters:
+Shields::Badge.gem_total_downloads(**path_parameters, **query_parameters)
 # =&gt; &quot;[![RubyGems Total Downloads](https://img.shields.io/gem/dt/orange?style=flat&amp;logo=github&amp;logoColor=yellow&amp;logoSize=auto&amp;label=banana&amp;labelColor=blue&amp;color=black&amp;cacheSeconds=3600&amp;link=https%3A%2F%2Fexample.com%2Fgreen%2Fred)](https://rubygems.org/gems/orange)
 </code></pre>
 
@@ -709,7 +716,7 @@ CodeCov currently fails to parse the coverage upload.
 </div></div>
 
       <div id="footer">
-  Generated on Fri May 30 06:25:09 2025 by
+  Generated on Fri May 30 08:41:00 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>

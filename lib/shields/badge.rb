@@ -43,8 +43,8 @@ require_relative "badge/version"
 # Or by requiring "shields/register_all"
 module Shields
   module Badge
-    SAFE_TO_CLASSIFY = /[\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}_]{1,511}/
-    SAFE_TO_UNDERSCORE = /[\p{UPPERCASE-LETTER}\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}]{1,256}/
+    SAFE_TO_CLASSIFY = /\A[\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}_]{1,511}\Z/
+    SAFE_TO_UNDERSCORE = /\A[\p{UPPERCASE-LETTER}\p{LOWERCASE-LETTER}\p{DECIMAL-NUMBER}]{1,256}\Z/
     SUBBER_UNDER = /(\p{UPPERCASE-LETTER})/
     INITIAL_UNDERSCORE = /^_/
 
@@ -80,17 +80,33 @@ module Shields
       # send it through the conversion to ensure it is clean
       # IMPORTANT: use the same logic as respond_to_missing?
       klass_name, clean_method = clean_method_name(method_name)
+      # This code should be unreachable, but it is here for completeness
+      # :nocov:
       return false unless klass_name && (clean_method == method_name.to_s)
+      # :nocov:
 
       category ||= Categories[clean_method]
       # method_name must also match the file name
       file_parts = ["badge", category, clean_method].compact
       file_extension = File.join(*file_parts)
-      require_relative(file_extension)
+      begin
+        require_relative(file_extension)
 
-      klass = Kernel.const_get("Shields::Badge::#{underscore_to_classy(category)}::#{klass_name}")
+        klass = Kernel.const_get("Shields::Badge::#{underscore_to_classy(category)}::#{klass_name}")
 
-      register(klass:)
+        return register(klass:)
+      rescue LoadError => error
+        if error.message.include?(file_extension)
+          # rescue is so method_missing, which likely called this method, can do its thing.
+          warn("Could not load #{file_extension} for #{klass_name} in #{__FILE__}:#{__LINE__}.\n")
+        else
+          # This code should be unreachable, but it is here for completeness
+          # :nocov:
+          raise error
+          # :nocov:
+        end
+      end
+      false
     end
     module_function :register_by_method_name
 
@@ -125,7 +141,7 @@ module Shields
 
     def classy_to_underscore(string)
       safe = string[SAFE_TO_UNDERSCORE]
-      raise Error, "Invalid badge class must match #{SAFE_TO_UNDERSCORE}: #{safe} (#{safe.class}) != #{string[0..255]} (#{string.class})" unless safe == string.to_s
+      raise Errors::Error, "Invalid badge class must match #{SAFE_TO_UNDERSCORE}: #{safe} (#{safe.class}) != #{string[0..255]} (#{string.class})" unless safe == string.to_s
 
       underscored = safe.gsub(SUBBER_UNDER) { "_#{$1}" }
       shifted_leading_underscore = underscored.sub(INITIAL_UNDERSCORE, "")

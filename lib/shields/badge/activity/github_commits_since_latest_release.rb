@@ -13,7 +13,7 @@ module Shields
 
         class QueryDto < ::Castkit::DataObject
           OPTIONS = {
-            sort: %[date semver],
+            sort: %w[date semver],
             include_prereleases: %w[true false],
           }
           FILTER_MATCHER = /[*!]/
@@ -26,7 +26,7 @@ module Shields
               true
             }
             string :sort, ignore_nil: true, validator: ->(v, _options) {
-              raise Errors::ValidationError, "invalid option for style, must be one of #{OPTIONS[:sort]}" if v && !OPTIONS[:sort].include?(v)
+              raise Errors::ValidationError, "invalid option for sort, must be one of #{OPTIONS[:sort]}" if v && !OPTIONS[:sort].include?(v)
               true
             }
             string :filter, ignore_nil: true, validator: ->(v, _options) {

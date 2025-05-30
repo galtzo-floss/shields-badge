@@ -28,6 +28,16 @@ RSpec.describe Shields::Badge do
       it "raises error" do
         block_is_expected.to raise_error(Shields::Errors::Error, "Badge class must be a class, but is String")
       end
+
+      context "when klass name too long" do
+        let(:klass) do
+          Struct.new("AbcDefGhiJkl" * 26)
+        end
+
+        it "does not register bad klass" do
+          block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge class must match.*256.* != .*/)
+        end
+      end
     end
 
     context "when bad as" do
@@ -83,8 +93,12 @@ RSpec.describe Shields::Badge do
     let(:category) { "some_category" }
 
     context "when not internal badge class" do
-      it "raises error" do
-        block_is_expected.to raise_error(LoadError, /such file.*some_fun_badge/)
+      it "does not raise error" do
+        block_is_expected.not_to raise_error
+      end
+
+      it "returns false" do
+        expect(register_by_method_name).to be(false)
       end
     end
 
@@ -92,7 +106,15 @@ RSpec.describe Shields::Badge do
       let(:method_name) { "BADCLASS" }
 
       it "raises error" do
-        block_is_expected.to raise_error(Shields::Errors::Error, "Invalid badge name must match (?-mix:[\\p{LOWERCASE-LETTER}\\p{DECIMAL-NUMBER}_]{1,511}):  (NilClass) != BADCLASS (String)")
+        block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
+      end
+    end
+
+    context "when badge method name too long" do
+      let(:method_name) { "abc_def_GHI_jkl" * 52 }
+
+      it "does not register bad klass" do
+        block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
       end
     end
 
@@ -114,8 +136,12 @@ RSpec.describe Shields::Badge do
         let(:method_name) { "github_commits_since_latest_release" }
         let(:category) { "sloppy" }
 
-        it "raises error" do
-          block_is_expected.to raise_error(LoadError, /such file.*github_commits_since_latest_release/)
+        it "does not raise error" do
+          block_is_expected.not_to raise_error
+        end
+
+        it "returns false" do
+          expect(register_by_method_name).to be(false)
         end
       end
 
@@ -160,7 +186,47 @@ RSpec.describe Shields::Badge do
     subject(:bad_method) { described_class.does_notExist }
 
     it "does not register bad klass" do
-      block_is_expected.to raise_error(Shields::Errors::Error, "Invalid badge name must match (?-mix:[\\p{LOWERCASE-LETTER}\\p{DECIMAL-NUMBER}_]{1,511}): does_not (String) != does_notExist (Symbol)")
+      block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
+    end
+
+    context "when method name just doesn't exist" do
+      subject(:bad_method) { described_class.oops }
+
+      it "does not register bad klass" do
+        block_is_expected.to raise_error(NoMethodError, "undefined method 'oops' for module Shields::Badge")
+      end
+    end
+
+    context "when method name too long" do
+      subject(:bad_method) { described_class.send("abc_def_ghi" * 52) }
+
+      it "does not register bad klass" do
+        block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
+      end
+    end
+  end
+
+  describe "::respond_to_missing?" do
+    subject(:no_response) { described_class.respond_to?(:does_notExist) }
+
+    it "does not register bad klass" do
+      block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
+    end
+
+    context "when method exists" do
+      subject(:has_response) { described_class.respond_to?(:gem_total_downloads) }
+
+      it "returns true" do
+        expect(has_response).to be(true)
+      end
+    end
+
+    context "when method name too long" do
+      subject(:bad_method) { described_class.respond_to?("abc_def_ghi" * 52) }
+
+      it "does not register bad klass" do
+        block_is_expected.to raise_error(Shields::Errors::Error, /Invalid badge name must match.*511.* != .*/)
+      end
     end
   end
 end

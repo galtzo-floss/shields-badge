@@ -126,6 +126,17 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
       )
     end
   end
+
+  context "when include_prereleases is invalid" do
+    let(:query_parameters) { {include_prereleases: "blue"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for include_prereleases, must be one of ["true", "false"]},
+      )
+    end
+  end
 end
 
 RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease::PathDto do
@@ -170,6 +181,45 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryD
 
     it "has logo" do
       expect(instance.logo).to eq("gitlab")
+    end
+  end
+
+  context "when include_prereleases is invalid" do
+    subject(:validated_method) { instance.include_prereleases }
+
+    let(:args) { {include_prereleases: "blue"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for include_prereleases, must be one of ["true", "false"]},
+      )
+    end
+  end
+
+  context "when sort is invalid" do
+    subject(:validated_method) { instance.sort }
+
+    let(:args) { {sort: "blue"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for sort, must be one of ["date", "semver"]},
+      )
+    end
+  end
+
+  context "when filter is invalid" do
+    subject(:validated_method) { instance.filter }
+
+    let(:args) { {filter: "blue"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for filter, must use * or ! but was blue},
+      )
     end
   end
 end

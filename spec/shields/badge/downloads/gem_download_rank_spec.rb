@@ -91,6 +91,17 @@ RSpec.describe Shields::Badge::Downloads::GemDownloadRank do
       )
     end
   end
+
+  context "when period is invalid" do
+    let(:path_parameters) { {period: "blue", gem: "orange"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for period, must be one of ["rt", "rd"]},
+      )
+    end
+  end
 end
 
 RSpec.describe Shields::Badge::Downloads::GemDownloadRank::PathDto do
@@ -100,6 +111,17 @@ RSpec.describe Shields::Badge::Downloads::GemDownloadRank::PathDto do
   context "when valid arguments" do
     it "has period" do
       expect(instance.period).to eq("rt")
+    end
+
+    context "when period is invalid" do
+      let(:args) { {period: "blue", gem: "orange"} }
+
+      it "raises an error" do
+        block_is_expected.to raise_error(
+          Castkit::ContractError,
+          %{Validation failed},
+        )
+      end
     end
 
     it "has gem" do

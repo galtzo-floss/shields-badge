@@ -94,6 +94,17 @@ RSpec.describe Shields::Badge::CodeCoverage::Coveralls do
       )
     end
   end
+
+  context "when vcs_type is invalid" do
+    let(:path_parameters) { {vcs_type: "blue", user: "green", repo: "red"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Shields::Errors::ValidationError,
+        %{invalid option for vcs_type, must be one of ["github", "bitbucket", "gitlab"]},
+      )
+    end
+  end
 end
 
 RSpec.describe Shields::Badge::CodeCoverage::Coveralls::PathDto do
@@ -111,6 +122,17 @@ RSpec.describe Shields::Badge::CodeCoverage::Coveralls::PathDto do
 
     it "has vcs_type" do
       expect(instance.vcs_type).to eq("github")
+    end
+  end
+
+  context "when vcs_type is invalid" do
+    let(:args) { {vcs_type: "blue", user: "green", repo: "red"} }
+
+    it "raises an error" do
+      block_is_expected.to raise_error(
+        Castkit::ContractError,
+        %{Validation failed},
+      )
     end
   end
 end
