@@ -96,7 +96,7 @@ NOTE: To build without signing the gem you must set `SKIP_GEM_SIGNING` to some v
 
 ### To release a new version:
 
-1. Run `bin/setup && bin/rake` as a tests, coverage, & linting sanity check
+1. Run `bin/setup && bin/rake` as a "test, coverage, & linting" sanity check
 2. Update the version number in `version.rb`, and ensure `CHANGELOG.md` reflects changes
 3. Run `bin/setup && bin/rake` again as a secondary check, and to update `Gemfile.lock`
 4. Run `git commit -am "🔖 Prepare release v<VERSION>"` to commit the changes
@@ -114,7 +114,7 @@ NOTE: To build without signing the gem you must set `SKIP_GEM_SIGNING` to some v
 11. Run `bin/gem_checksums` (more context [1][🔒️rubygems-checksums-pr], [2][🔒️rubygems-guides-pr])
     to create SHA-256 and SHA-512 checksums. This functionality is provided by the `stone_checksums`
     [gem][💎stone_checksums].
-    - Checksums will be committed automatically by the script, but not pushed
+    - Checksums will be committed automatically by the script but not pushed
 12. Run `bundle exec rake release` which will create a git tag for the version,
     push git commits and tags, and push the `.gem` file to [rubygems.org][💎rubygems]
 

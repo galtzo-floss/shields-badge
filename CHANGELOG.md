@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning v2](https://semver.org/spec/v2.
 - TAG: [v1.0.0][1.0.0t]
 - Line Coverage: 99.45% (360 / 362)
 - Branch Coverage: 94.29% (33 / 35)
-27.12% documented
+- 27.12% documented
 ### Added
 - Initial release
 - Badge: Activity - `GithubCommitsSinceLatestRelease`

@@ -18,6 +18,17 @@
 
 [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
+[⛳liberapay]: https://liberapay.com/pboling/donate
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
+[🖇polar]: https://polar.sh/pboling
+[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
+[🖇kofi]: https://ko-fi.com/O5O86SNP4
+[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
+[🖇patreon]: https://patreon.com/galtzo
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
 
 RubyGem version of the interactive tool found at [shields.io/badges](https://shields.io/badges).
 
@@ -372,8 +383,10 @@ Also see GitLab Contributors: [https://gitlab.com/galtzo-floss/shields-badge/-/g
 
 <a href="https://star-history.com/#galtzo-floss/shields-badge&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/shields-badge&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=galtzo-floss/shields-badge&type=Date" />
+   <source media="(prefers-color-scheme: dark)"
+           srcset="https://api.star-history.com/svg?repos=galtzo-floss/shields-badge&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)"
+           srcset="https://api.star-history.com/svg?repos=galtzo-floss/shields-badge&type=Date" />
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=galtzo-floss/shields-badge&type=Date" />
  </picture>
 </a>
@@ -425,7 +438,7 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 
 <ul>
     <li>
-        2025 Peter H. Boling, of
+        Copyright (c) 2025 Peter H. Boling, of
         <a href="https://discord.gg/3qme4XHNKN">
             Galtzo.com
             <picture>
@@ -445,6 +458,9 @@ Please consider supporting my efforts via the giant yellow link below,
 or one of the others at the head of this README.
 
 [![Buy me a latte][🖇buyme-img]][🖇buyme]
+
+[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
+[🖇buyme]: https://www.buymeacoffee.com/pboling
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [⛳️gem-namespace]: https://github.com/galtzo-floss/shields-badge
@@ -530,19 +546,6 @@ or one of the others at the head of this README.
 [🚎11-c-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current.yml/badge.svg
 [🚎12-crh-wf]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current-runtime-heads.yml
 [🚎12-crh-wfi]: https://github.com/galtzo-floss/shields-badge/actions/workflows/current-runtime-heads.yml/badge.svg
-[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
-[⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
-[🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
-[🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
-[🖇kofi]: https://ko-fi.com/O5O86SNP4
-[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
-[🖇patreon]: https://patreon.com/galtzo
-[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
-[🖇buyme]: https://www.buymeacoffee.com/pboling
-[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
