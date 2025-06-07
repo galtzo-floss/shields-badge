@@ -153,7 +153,7 @@ See: <a href="https://guides.rubygems.org/security/#building-gems">RubyGems Secu
 <h3 id="to-release-a-new-version">To release a new version:</h3>
 
 <ol>
-  <li>Run <code>bin/setup &amp;&amp; bin/rake</code> as a tests, coverage, &amp; linting sanity check</li>
+  <li>Run <code>bin/setup &amp;&amp; bin/rake</code> as a “test, coverage, &amp; linting” sanity check</li>
   <li>Update the version number in <code>version.rb</code>, and ensure <code>CHANGELOG.md</code> reflects changes</li>
   <li>Run <code>bin/setup &amp;&amp; bin/rake</code> again as a secondary check, and to update <code>Gemfile.lock</code>
 </li>
@@ -184,7 +184,7 @@ See: <a href="https://guides.rubygems.org/security/#building-gems">RubyGems Secu
 to create SHA-256 and SHA-512 checksums. This functionality is provided by the <code>stone_checksums</code><br>
 <a href="https://github.com/pboling/stone_checksums">gem</a>.
     <ul>
-      <li>Checksums will be committed automatically by the script, but not pushed</li>
+      <li>Checksums will be committed automatically by the script but not pushed</li>
     </ul>
   </li>
   <li>Run <code>bundle exec rake release</code> which will create a git tag for the version,<br>
@@ -195,7 +195,7 @@ push git commits and tags, and push the <code>.gem</code> file to <a href="https
 </div></div>
 
       <div id="footer">
-  Generated on Fri May 30 09:56:41 2025 by
+  Generated on Sat Jun  7 13:03:51 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.3).
 </div>
