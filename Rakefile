@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Galtzo FLOSS Rakefile v1.0.8 - 2025-08-17
+# Galtzo FLOSS Rakefile v1.0.9 - 2025-08-18
 #
 # CHANGELOG
 # v1.0.0 - initial release w/ support for rspec, minitest, rubocop, reek, yard, and stone_checksums
@@ -12,6 +12,7 @@
 # v1.0.6 - add RBS files and checksums to YARD-generated docs site
 # v1.0.7 - works with vanilla ruby, non-gem, bundler-managed, projects
 # v1.0.8 - improved Dir globs, add back and document rbconfig dependency
+# v1.0.9 - add appraisal:update task to update Appraisal gemfiles and autocorrect with RuboCop Gradual
 #
 # MIT License (see License.txt)
 #
@@ -135,10 +136,10 @@ end
 # rubocop:disable Rake/DuplicateTask
 if Rake::Task.task_defined?("spec") && !Rake::Task.task_defined?("test")
   desc "run spec task with test task"
-  task :test => :spec
+  task test: :spec
 elsif !Rake::Task.task_defined?("spec") && Rake::Task.task_defined?("test")
   desc "run test task with spec task"
-  task :spec => :test
+  task spec: :test
 else
   # Add spec as pre-requisite to 'test'
   Rake::Task[:test].enhance(["spec"])
@@ -220,6 +221,40 @@ rescue LoadError
   end
 end
 
+# Appraisal tasks
+begin
+  require "bundler"
+rescue LoadError
+  # ok
+end
+
+desc "Update Appraisal gemfiles and run RuboCop Gradual autocorrect"
+task "appraisal:update" do
+  bundle = Gem.bindir ? File.join(Gem.bindir, "bundle") : "bundle"
+
+  run_in_unbundled = proc do
+    env = {"BUNDLE_GEMFILE" => "Appraisal.root.gemfile"}
+
+    # 1) BUNDLE_GEMFILE=Appraisal.root.gemfile bundle
+    ok = system(env, bundle)
+    abort("appraisal:update failed: bundler install under Appraisal.root.gemfile") unless ok
+
+    # 2) BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
+    ok = system(env, bundle, "exec", "appraisal", "update")
+    abort("appraisal:update failed: bundle exec appraisal update") unless ok
+
+    # 3) bundle exec rake rubocop_gradual:autocorrect
+    ok = system(bundle, "exec", "rake", "rubocop_gradual:autocorrect")
+    abort("appraisal:update failed: rubocop_gradual:autocorrect") unless ok
+  end
+
+  if defined?(Bundler)
+    Bundler.with_unbundled_env(&run_in_unbundled)
+  else
+    run_in_unbundled.call
+  end
+end
+
 ### RELEASE TASKS
 # Setup stone_checksums
 begin
@@ -284,6 +319,6 @@ namespace :bench do
 end
 
 desc "Run all benchmarks (alias for bench:run)"
-task :bench => "bench:run"
+task bench: "bench:run"
 
-task :default => defaults
+task default: defaults
