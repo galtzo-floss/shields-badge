@@ -167,5 +167,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("standard", "~> 1.50")                      # ruby >= 3.0.0, linting tool (primarily used for configs)
   spec.add_development_dependency("timecop", "~> 0.9", ">= 0.9.10")           # ruby >= 1.9.2, for time-based testing
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")              # Ruby >= 0, YARD Ruby source code documentation generator
-  spec.add_development_dependency("yard-relative_markdown_links", "~> 0.5.0") # ruby >= 3.2, YARD plugin for relative Markdown links
+  spec.add_development_dependency("yard-relative_markdown_links", "~> 0.6") # ruby >= 3.2, YARD plugin for relative Markdown links
 end
