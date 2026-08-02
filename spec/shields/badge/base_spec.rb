@@ -38,7 +38,7 @@ RSpec.describe Shields::Badge::Base do
         {
           path_parameters:,
           query_parameters:,
-          image_type: image_type,
+          image_type: image_type
         }
       }
       let(:path_parameters) { {user: "green", repo: "red"} }
@@ -53,7 +53,7 @@ RSpec.describe Shields::Badge::Base do
         let(:image_type) { nil }
 
         it "raises error" do
-          block_is_expected.to raise_error(Shields::Errors::Error, %{Unknown image type:  must be one of ["svg", "png"]})
+          block_is_expected.to raise_error(Shields::Errors::Error, %(Unknown image type:  must be one of ["svg", "png"]))
         end
       end
 
@@ -63,7 +63,7 @@ RSpec.describe Shields::Badge::Base do
           {
             **path_parameters,
             **query_parameters,
-            image_type: image_type,
+            image_type: image_type
           }
         }
 

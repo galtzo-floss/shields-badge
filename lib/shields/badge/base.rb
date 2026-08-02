@@ -6,7 +6,7 @@ module Shields
       HTTP_METHOD = :get
       BASE_URL = {
         "svg" => "https://img.shields.io",
-        "png" => "https://raster.shields.io",
+        "png" => "https://raster.shields.io"
       }
 
       class << self
@@ -48,7 +48,7 @@ module Shields
       def format(formatter)
         args = formatter.signature.each_with_object({}) { |key, memo| memo[key] = send(key) }
         formatter.call(
-          **args,
+          **args
         )
       end
 

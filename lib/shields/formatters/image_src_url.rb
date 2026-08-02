@@ -1,7 +1,7 @@
 module Shields
   module Formatters
     module ImageSrcUrl
-      SIGNATURE = %i(img_src_url)
+      SIGNATURE = %i[img_src_url]
 
       def call(img_src_url:)
         img_src_url

@@ -14,7 +14,7 @@ module Shields
         class QueryDto < ::Castkit::DataObject
           OPTIONS = {
             sort: %w[date semver],
-            include_prereleases: %w[true false],
+            include_prereleases: %w[true false]
           }
           FILTER_MATCHER = /[*!]/
 

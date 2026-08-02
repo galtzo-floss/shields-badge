@@ -24,7 +24,7 @@ RSpec.describe Shields::Serializers::CamelCaser do
           logo_color: "purple",
           logo_size: "auto",
           sort: "semver",
-          style: "plastic",
+          style: "plastic"
         }
       }
 
@@ -42,7 +42,7 @@ RSpec.describe Shields::Serializers::CamelCaser do
           logoColor: "purple",
           logoSize: "auto",
           sort: "semver",
-          style: "plastic",
+          style: "plastic"
         })
       end
     end

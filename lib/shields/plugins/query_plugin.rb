@@ -8,7 +8,7 @@ module Shields
         cache_seconds
       ].freeze
       UNIVERSAL_OPTIONS = {
-        style: %w[flat flat-square plastic for-the-badge social],
+        style: %w[flat flat-square plastic for-the-badge social]
       }
 
       class << self
@@ -20,12 +20,12 @@ module Shields
               true
             })
             klass.string(:logo, ignore_nil: true)
-            klass.string(:logo_color, ignore_nil: true, aliases: %w(logoColor))
-            klass.string(:logo_size, ignore_nil: true, aliases: %w(logoSize))
+            klass.string(:logo_color, ignore_nil: true, aliases: %w[logoColor])
+            klass.string(:logo_size, ignore_nil: true, aliases: %w[logoSize])
             klass.string(:label, ignore_nil: true)
-            klass.string(:label_color, ignore_nil: true, aliases: %w(labelColor))
+            klass.string(:label_color, ignore_nil: true, aliases: %w[labelColor])
             klass.string(:color, ignore_nil: true)
-            klass.string(:cache_seconds, ignore_nil: true, aliases: %w(cacheSeconds), validator: ->(v, _options) {
+            klass.string(:cache_seconds, ignore_nil: true, aliases: %w[cacheSeconds], validator: ->(v, _options) {
               raise Errors::ValidationError, "invalid option for cache_seconds, must be an integer string but was #{v} (#{v.class})" if v && v.to_i.to_s != v
               true
             })

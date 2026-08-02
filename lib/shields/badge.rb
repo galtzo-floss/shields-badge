@@ -34,9 +34,9 @@ require_relative "errors/validation_error"
 
 # Core
 require_relative "badge/base"
+require_relative "badge/version"
 
 # Version
-require_relative "badge/version"
 
 # Badges
 # Individually required as they are registered

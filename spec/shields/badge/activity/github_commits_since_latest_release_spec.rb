@@ -8,7 +8,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
   let(:args) {
     {
       path_parameters:,
-      query_parameters:,
+      query_parameters:
     }
   }
   let(:path_parameters) { {user: "green", repo: "red"} }
@@ -40,7 +40,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
         label_color: "blue",
         color: "black",
         cache_seconds: "3600",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
@@ -63,14 +63,14 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
         label_color: "blue",
         color: "black",
         cache_seconds: "3600",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        "invalid option for filter, must use * or ! but was all",
+        "invalid option for filter, must use * or ! but was all"
       )
     end
   end
@@ -89,14 +89,14 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
         label_color: "blue",
         color: "black",
         cache_seconds: "a long timer",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        "invalid option for cache_seconds, must be an integer string but was a long timer (String)",
+        "invalid option for cache_seconds, must be an integer string but was a long timer (String)"
       )
     end
   end
@@ -115,14 +115,14 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
         label_color: "blue",
         color: "black",
         cache_seconds: "3600",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for style, must be one of ["flat", "flat-square", "plastic", "for-the-badge", "social"]},
+        %(invalid option for style, must be one of ["flat", "flat-square", "plastic", "for-the-badge", "social"])
       )
     end
   end
@@ -133,7 +133,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease do
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for include_prereleases, must be one of ["true", "false"]},
+        %(invalid option for include_prereleases, must be one of ["true", "false"])
       )
     end
   end
@@ -192,7 +192,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryD
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for include_prereleases, must be one of ["true", "false"]},
+        %(invalid option for include_prereleases, must be one of ["true", "false"])
       )
     end
   end
@@ -205,7 +205,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryD
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for sort, must be one of ["date", "semver"]},
+        %(invalid option for sort, must be one of ["date", "semver"])
       )
     end
   end
@@ -218,7 +218,7 @@ RSpec.describe Shields::Badge::Activity::GithubCommitsSinceLatestRelease::QueryD
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for filter, must use * or ! but was blue},
+        %(invalid option for filter, must use * or ! but was blue)
       )
     end
   end

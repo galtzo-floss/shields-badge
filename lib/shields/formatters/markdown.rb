@@ -1,7 +1,7 @@
 module Shields
   module Formatters
     module Markdown
-      SIGNATURE = %i(label_text img_src_url anchor_href_url)
+      SIGNATURE = %i[label_text img_src_url anchor_href_url]
 
       def call(label_text:, img_src_url:, anchor_href_url:)
         "[![%{label_text}](%{img_src_url})](%{anchor_href_url})" %

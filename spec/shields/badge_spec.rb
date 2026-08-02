@@ -74,14 +74,14 @@ RSpec.describe Shields::Badge do
     it "returns markdown format by default" do
       register
       expect(
-        described_class.some_fun_badge(style: "strawberry"),
+        described_class.some_fun_badge(style: "strawberry")
       ).to eq("[![Woo Hoo!](https://example.org/image.png)](https://example.com/little-project)")
     end
 
     it "returns url format when indicated" do
       register
       expect(
-        described_class.some_fun_badge(style: "strawberry", as: :image_src_url),
+        described_class.some_fun_badge(style: "strawberry", as: :image_src_url)
       ).to eq("https://example.org/image.png")
     end
   end

@@ -1,0 +1,58 @@
+{
+  "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
+    {
+      "file": ".devcontainer/devcontainer.json",
+      "lines": [
+        11,
+        22
+      ]
+    }
+  ],
+  "bench_files = Dir[File.join(__dir__, \"benchmarks\", \"*.rb\")].sort\nif bench_files.empty?": [
+    {
+      "file": "Rakefile",
+      "lines": [
+        373,
+        390
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/runtime_heads.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        57,
+        64
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/x_std_libs.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        69,
+        98,
+        105,
+        111
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/x_std_libs/r3/libs.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        84,
+        89
+      ]
+    }
+  ],
+  "if bench_files.empty?\nputs \"No benchmark scripts found under benchmarks/.\"": [
+    {
+      "file": "Rakefile",
+      "lines": [
+        374,
+        391
+      ]
+    }
+  ]
+}

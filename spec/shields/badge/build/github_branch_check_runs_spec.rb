@@ -7,7 +7,7 @@ RSpec.describe Shields::Badge::Build::GithubBranchCheckRuns do
   let(:args) {
     {
       path_parameters:,
-      query_parameters:,
+      query_parameters:
     }
   }
   let(:path_parameters) { {user: "green", repo: "red", branch: "main"} }
@@ -38,7 +38,7 @@ RSpec.describe Shields::Badge::Build::GithubBranchCheckRuns do
         label_color: "blue",
         color: "black",
         cache_seconds: "3600",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
@@ -59,14 +59,14 @@ RSpec.describe Shields::Badge::Build::GithubBranchCheckRuns do
         label_color: "blue",
         color: "black",
         cache_seconds: "a long timer",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        "invalid option for cache_seconds, must be an integer string but was a long timer (String)",
+        "invalid option for cache_seconds, must be an integer string but was a long timer (String)"
       )
     end
   end
@@ -83,14 +83,14 @@ RSpec.describe Shields::Badge::Build::GithubBranchCheckRuns do
         label_color: "blue",
         color: "black",
         cache_seconds: "3600",
-        link: "https://example.com/green/red",
+        link: "https://example.com/green/red"
       }
     }
 
     it "raises an error" do
       block_is_expected.to raise_error(
         Shields::Errors::ValidationError,
-        %{invalid option for style, must be one of ["flat", "flat-square", "plastic", "for-the-badge", "social"]},
+        %(invalid option for style, must be one of ["flat", "flat-square", "plastic", "for-the-badge", "social"])
       )
     end
   end

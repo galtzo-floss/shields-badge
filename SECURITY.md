@@ -2,9 +2,9 @@
 
 ## Supported Versions
 
-| Version  | Supported | Enterprise Support                    |
-|----------|-----------|---------------------------------------|
-| 1.latest | ✅         | [Tidelift Subscription][tidelift-ref] |
+| Version  | Supported |
+|----------|-----------|
+| 1.0.latest | ✅         |
 
 ## Security contact information
 
@@ -19,11 +19,3 @@ please consider sponsoring the project / maintainer @ https://liberapay.com/pbol
 or find other sponsorship links in the [README].
 
 [README]: README.md
-
-## Enterprise Support
-
-Available as part of the Tidelift Subscription.
-
-The maintainers of this library and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use. [Learn more.][tidelift-ref]
-
-[tidelift-ref]: https://tidelift.com/subscription/pkg/rubygems-shields-badge?utm_source=rubygems-shields-badge&utm_medium=referral&utm_campaign=enterprise&utm_term=repo

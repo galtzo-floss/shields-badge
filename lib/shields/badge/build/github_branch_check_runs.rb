@@ -16,7 +16,7 @@ module Shields
           enable_plugins :query_plugin
 
           optional do
-            string :name_filter, ignore_nil: true, aliases: %w(nameFilter)
+            string :name_filter, ignore_nil: true, aliases: %w[nameFilter]
           end
 
           # Calls up to QueryPlugin#camel_case_keys

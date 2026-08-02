@@ -12,7 +12,7 @@ module Shields
           enable_plugins :github_repo_plugin
 
           required do
-            string :vcs_type, ignore_nil: true, aliases: %w(vcsType), validator: ->(v, _options) {
+            string :vcs_type, ignore_nil: true, aliases: %w[vcsType], validator: ->(v, _options) {
               raise Errors::ValidationError, "invalid option for vcs_type, must be one of #{VCS_TYPES}" if v && !VCS_TYPES.include?(v)
               true
             }

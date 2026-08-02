@@ -6,7 +6,7 @@ module Shields
       "coveralls" => "code_coverage",
       "gem_download_rank" => "downloads",
       "gem_total_downloads" => "downloads",
-      "github_repo_stars" => "social",
+      "github_repo_stars" => "social"
     }
 
     def [](name)
