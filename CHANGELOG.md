@@ -11,6 +11,9 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Deprecated
 ### Removed
 ### Fixed
+
+- Correct the source-code release URL and refresh package development dependencies.
+
 ### Security
 
 ## [1.0.0] - 2025-05-29

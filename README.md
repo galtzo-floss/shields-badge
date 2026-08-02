@@ -5,6 +5,9 @@
     <a href="https://shields.io" target="_blank" rel="noopener">
       <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/shields-logo-200px.png?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
     </a>
+    <a href="https://shields.io" target="_blank" rel="noopener">
+      <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/shields-badge-192px-gl.png?raw=true" alt="Galtzo.com Logo by Aboling0, CC BY-SA 4.0">
+    </a>
     <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
       <img width="124px" src="https://github.com/galtzo-floss/shields-badge/raw/main/docs/images/logo/ruby-logo-198px.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
     </a>
