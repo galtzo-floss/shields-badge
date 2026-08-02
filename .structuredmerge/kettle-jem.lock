@@ -587,14 +587,14 @@ files:
     recipe: template_source_application_Appraisal_root_gemfile
     action: write
     dest_sha256: 8724e3f6faea995be655ac49369bec64a70710112b1f65707fa38f1fd2fd3254
-    input_fingerprint: 19d48771ac7e04c520501ee13e5ad2812b3233135ff4af211b1d4be41d05dd8e
+    input_fingerprint: a277b2e8d3d988b5391d624ed49166af48751c72e23ae76eee5858be56da1f1d
     template_sources:
     - Appraisal.root.gemfile.example
   Appraisals:
     recipe: template_source_application_Appraisals
     action: write
     dest_sha256: a7c9b052b6ae5178238eb660a2ab2a68712e4c10833de9f2b64fdf4253a4f95b
-    input_fingerprint: 49aede0a7698a3bcb6bc77f3cbd1e90de7d521bb7fed24ff3ad881012ed5a23d
+    input_fingerprint: 2c013882f1a21b1a1f0537b49123a19afa43f5c1e8564a75db8168b7f4369043
     template_sources:
     - Appraisals.example
   CHANGELOG.md:
@@ -1013,7 +1013,7 @@ files:
   shields-badge.gemspec:
     recipe: template_source_application_shields_badge_gemspec
     action: write
-    dest_sha256: 392fbf32f17324a601eed2b414995be6968a8eaeeb727507593c3b5720d3c791
+    dest_sha256: 16a0143809fd13cb6e9294d6eb2a078078136810015cc3e0aa7ccb20369da315
     input_fingerprint: 31309990910ac7f1cd1eaee29e33c127e6b1786390652f59f4fc182142cb36cd
     template_sources:
     - gem.gemspec.example
@@ -1035,6 +1035,6 @@ files:
     recipe: template_source_application_spec_spec_helper_rb
     action: write
     dest_sha256: aeea37778944ff5dc57654d6e7ad653d208d7dd57de365fd6eb65500744f5b14
-    input_fingerprint: 1a81aeee125e0784986edd2bea66d5ca61e975023c5a71da66cf6fa55d1e347b
+    input_fingerprint: d5c69d61f707beb148c41b5cde062beab00c378a880106acfec34e5445820ef2
     template_sources:
     - spec/spec_helper.rb.example
