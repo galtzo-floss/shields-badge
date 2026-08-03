@@ -154,7 +154,6 @@ Gem::Specification.new do |spec|
   # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("kramdown", "~> 2.5", ">= 2.5.1")           # Ruby >= 2.5, Markdown parser
   spec.add_development_dependency("kramdown-parser-gfm", "~> 1.1")            # Ruby >= 2.3, GFM support for kramdown
-  spec.add_development_dependency("rdoc", "~> 6.14", ">= 6.14.2")             # ruby >= 2.6.0, RDoc Ruby source code documentation generator
   spec.add_development_dependency("reek", "~> 6.4")                           # ruby >= 3.1.0, code smell detector
   spec.add_development_dependency("rspec", "~> 3.13")                         # ruby > 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")        # ruby >= 1.8.7, for block_is_expected.to syntax
