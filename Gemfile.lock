@@ -402,6 +402,7 @@ GEM
     zlib (3.2.3)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
