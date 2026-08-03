@@ -22,7 +22,6 @@ platform :mri do
 
   if ENV.fetch("RUBOCOP_LTS_LOCAL", "false").casecmp("false").zero?
     declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
-    gem "rubocop-lts", "~> 22.3", ">= 22.3.1" unless declared_gems.include?("rubocop-lts")
     gem "rubocop-lts-rspec", "~> 1.0", ">= 1.0.5" unless declared_gems.include?("rubocop-lts-rspec")
     gem "rubocop-ruby3_1", "~> 3.0", ">= 3.0.5" unless declared_gems.include?("rubocop-ruby3_1")
   else

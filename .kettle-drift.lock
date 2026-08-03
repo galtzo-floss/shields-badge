@@ -1,4 +1,13 @@
 {
+  "- gem: yard-relative_markdown_links\ndirect: shields-badge.gemspec": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        139,
+        144
+      ]
+    }
+  ],
   "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
     {
       "file": ".devcontainer/devcontainer.json",
@@ -14,6 +23,29 @@
       "lines": [
         375,
         392
+      ]
+    }
+  ],
+  "direct: shields-badge.gemspec\nmodular: gemfiles/modular/documentation.gemfile": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        95,
+        100,
+        105,
+        135,
+        140
+      ]
+    }
+  ],
+  "direct: shields-badge.gemspec\nmodular: gemfiles/modular/style.gemfile": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        110,
+        120,
+        125,
+        130
       ]
     }
   ],
@@ -52,6 +84,28 @@
       "lines": [
         376,
         393
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/documentation.gemfile\naction: keep_both": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        96,
+        101,
+        106,
+        136,
+        141
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/style.gemfile\naction: keep_both": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        111,
+        126,
+        131
       ]
     }
   ]
