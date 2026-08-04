@@ -2,6 +2,9 @@
   "Rakefile:2774721514": [
     [166, 5, 15, "Rake/Desc: Describe the task with `desc` method.", 842824456]
   ],
+  "gemfiles/modular/templating.gemfile:3018447732": [
+    [14, 3, 47, "Bundler/DuplicatedGem: Gem `tree_sitter_language_pack` requirements already given on line 10 of the Gemfile.", 3843603197]
+  ],
   "lib/shields/badge/base.rb:2324042219": [
     [61, 17, 43, "Style/HashSlice: Use `slice(*args_for_dto)` instead.", 1681085889]
   ],
