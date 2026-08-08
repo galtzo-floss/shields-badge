@@ -118,6 +118,12 @@ gem install shields-badge
 
 ## ⚙️ Configuration
 
+There is no application-wide configuration file. Requiring `shields/badge`
+loads the badge registry and plugins; use `Shields::Badge.register_all` when
+you want every built-in badge eagerly loaded. Otherwise badge classes are
+loaded on first use. Badge methods accept an `as:` formatter option, currently
+`:markdown` or `:image_src_url`.
+
 ## 🔧 Basic Usage
 
 All parameters are in snake case when passing as Ruby arguments.
