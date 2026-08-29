@@ -3,8 +3,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        141,
-        146
+        154,
+        159
       ]
     }
   ],
@@ -21,8 +21,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        383,
-        400
+        385,
+        402
       ]
     }
   ],
@@ -30,11 +30,11 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        97,
-        102,
-        107,
-        137,
-        142
+        110,
+        115,
+        120,
+        150,
+        155
       ]
     }
   ],
@@ -42,10 +42,10 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        112,
-        122,
-        127,
-        132
+        125,
+        135,
+        140,
+        145
       ]
     }
   ],
@@ -82,8 +82,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        384,
-        401
+        386,
+        403
       ]
     }
   ],
@@ -91,11 +91,11 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        98,
-        103,
-        108,
-        138,
-        143
+        111,
+        116,
+        121,
+        151,
+        156
       ]
     }
   ],
@@ -103,9 +103,9 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        113,
-        128,
-        133
+        126,
+        141,
+        146
       ]
     }
   ]

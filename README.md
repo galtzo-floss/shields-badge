@@ -78,7 +78,9 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 
 </details>
 
-### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/shields-badge)](https://tidelift.com/subscription/pkg/rubygems-shields-badge?utm_source=rubygems-shields-badge&utm_medium=referral&utm_campaign=readme)
+### Enterprise Support
+
+[![Tidelift](https://tidelift.com/badges/package/rubygems/shields-badge)](https://tidelift.com/subscription/pkg/rubygems-shields-badge?utm_source=rubygems-shields-badge&utm_medium=referral&utm_campaign=readme)
 
 Available as part of the Tidelift Subscription.
 
@@ -362,7 +364,6 @@ See [LICENSE.md][📄license] for the official copyright notice.
 <details markdown="1">
 <summary>Copyright holders</summary>
 
-- Copyright (c) 2025 Aboling0
 - Copyright (c) 2025 Annibelle Boling
 - Copyright (c) 2025-2026 Peter H. Boling
 
