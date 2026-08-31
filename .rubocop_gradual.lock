@@ -1,11 +1,11 @@
 {
-  "Rakefile:2708469546": [
+  "Rakefile:778925996": [
     [166, 5, 15, "Rake/Desc: Describe the task with `desc` method.", 842824456]
   ],
   "lib/shields/badge/base.rb:2324042219": [
     [61, 17, 43, "Style/HashSlice: Use `slice(*args_for_dto)` instead.", 1681085889]
   ],
-  "shields-badge.gemspec:4037123864": [
+  "shields-badge.gemspec:1025359288": [
     [22, 32, 8, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (3.2, which may be specified in .rubocop.yml) should be equal.", 484902186]
   ],
   "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:1578763856": [
