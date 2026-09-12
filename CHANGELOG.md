@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.1] - 2026-09-11
+
+- TAG: [v1.0.1][1.0.1t]
+- COVERAGE: 99.45% -- 361/363 lines in 24 files
+- BRANCH COVERAGE: 94.29% -- 33/35 branches in 24 files
+- 29.41% documented
+
+### Added
+
 - kettle-jem-template-20260720-005 - README Support & Community links now
   include RubyForum.
 - kettle-jem-template-20260726-001 - Projects now include YARD lint
@@ -49,10 +68,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - [kc] kettle-jem/template: updated 6 project files:
   - dependencies (5)
   - other (1)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -98,14 +113,15 @@ Please file a bug if you notice a violation of semantic versioning.
   legacy manual bundle install path, avoiding setup-time Bundler full-index
   failures against `gem.coop`.
 
-### Security
-
 ## [1.0.0] - 2025-05-29
+
 - TAG: [v1.0.0][1.0.0t]
 - Line Coverage: 99.45% (360 / 362)
 - Branch Coverage: 94.29% (33 / 35)
 - 27.12% documented
+
 ### Added
+
 - Initial release
 - Badge: Activity - `GithubCommitsSinceLatestRelease`
 - Badge: Build - `GithubBranchCheckRuns`
@@ -114,6 +130,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - Badge: Downloads - `GemTotalDownloads`
 - Badge: Social - `GithubRepoStars`
 
-[Unreleased]: https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/galtzo-floss/shields-badge/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/galtzo-floss/shields-badge/compare/v1.0.0...v1.0.1
+[1.0.1t]: https://github.com/galtzo-floss/shields-badge/releases/tag/v1.0.1
 [1.0.0]: https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...v1.0.0
-[1.0.0t]: https://gitlab.com/galtzo-floss/shields-badge/-/tags/v1.0.0
+[1.0.0t]: https://github.com/galtzo-floss/shields-badge/releases/tag/v1.0.0

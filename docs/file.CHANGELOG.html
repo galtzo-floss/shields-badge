@@ -10,9 +10,9 @@
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/common.css" type="text/css">
 
 <script type="text/javascript">
   pathId = "CHANGELOG";
@@ -27,6 +27,8 @@
 
   </head>
   <body>
+    <div id="main_progress" aria-hidden="true"></div>
+
     <div class="nav_wrap">
       <iframe id="nav" src="file_list.html?1"></iframe>
       <div id="resizer"></div>
@@ -58,29 +60,145 @@
       </div>
 
       <div id="content"><div id='filecontents'><h1 id="changelog">Changelog</h1>
+
+<p><a href="https://semver.org/spec/v2.0.0.html"><img src="https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat" alt="SemVer 2.0.0"></a> <a href="https://keepachangelog.com/en/1.0.0/"><img src="https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat" alt="Keep-A-Changelog 1.0.0"></a></p>
+
 <p>All notable changes to this project will be documented in this file.</p>
 
-<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog v1</a>,<br>
-and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning v2</a>.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,<br>
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>,<br>
+and <a href="https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html">yes</a>, platform and engine support are part of the <a href="https://github.com/semver/semver/issues/716#issuecomment-869336139">public API</a>.<br>
+Please file a bug if you notice a violation of semantic versioning.</p>
 
-<h2 id="unreleased"><a href="https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...HEAD">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://github.com/galtzo-floss/shields-badge/compare/v1.0.1...HEAD">Unreleased</a></h2>
+
 <h3 id="added">Added</h3>
+
 <h3 id="changed">Changed</h3>
+
 <h3 id="deprecated">Deprecated</h3>
+
 <h3 id="removed">Removed</h3>
+
 <h3 id="fixed">Fixed</h3>
+
 <h3 id="security">Security</h3>
+
+<h2 id="101---2026-09-11">
+<a href="https://github.com/galtzo-floss/shields-badge/compare/v1.0.0...v1.0.1">1.0.1</a> - 2026-09-11</h2>
+
+<ul>
+  <li>TAG: <a href="https://github.com/galtzo-floss/shields-badge/releases/tag/v1.0.1">v1.0.1</a>
+</li>
+  <li>COVERAGE: 99.45% – 361/363 lines in 24 files</li>
+  <li>BRANCH COVERAGE: 94.29% – 33/35 branches in 24 files</li>
+  <li>29.41% documented</li>
+</ul>
+
+<h3 id="added-1">Added</h3>
+
+<ul>
+  <li>kettle-jem-template-20260720-005 - README Support &amp; Community links now<br>
+include RubyForum.</li>
+  <li>kettle-jem-template-20260726-001 - Projects now include YARD lint<br>
+configuration and documentation dependencies so documentation issues fail<br>
+before generated docs are refreshed.</li>
+  <li>kettle-jem-template-20260727-001 - Spec harness documentation now lists the<br>
+RSpec helpers provided by <code>kettle-test</code>.</li>
+</ul>
+
+<h3 id="changed-1">Changed</h3>
+
+<ul>
+  <li>kettle-jem-template-20260716-002 - Gemspecs now ship fewer repository-only<br>
+files, reducing package noise for downstream packagers.</li>
+  <li>kettle-jem-template-20260720-002 - Development Gemfiles now use the released<br>
+<code>tree_sitter_language_pack</code> gem 1.13.3 or newer by default.</li>
+  <li>kettle-jem-template-20260725-002 - Version specs now use <code>anonymous_loader</code> to<br>
+cover <code>version.rb</code> without redefining constants, or are removed when version<br>
+specs are not managed for the project.</li>
+  <li>kettle-jem-template-20260728-001 - Generated Ruby workflows now use clearer<br>
+setup-ruby-flash planning and can prepare appraisal-only jobs without<br>
+installing the main Gemfile bundle.</li>
+  <li>
+    <p>kettle-jem-template-20260801-001 - Generated README gem dashboard links now<br>
+use ClickGems instead of BestGems.</p>
+  </li>
+  <li>[kc] kettle-jem/prepare: updated 10 project files:
+    <ul>
+      <li>dependencies (10)</li>
+    </ul>
+  </li>
+  <li>[kc] kettle-jem/template: updated 6 project files:
+    <ul>
+      <li>dependencies (5)</li>
+      <li>other (1)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="fixed-1">Fixed</h3>
+
+<ul>
+  <li>
+    <p>Correct the source-code release URL and refresh package development dependencies.</p>
+  </li>
+  <li>kettle-jem-template-20260720-003 - StructuredMerge Git diff driver config now<br>
+uses the installed <code>smorg-rb</code> driver command.</li>
+  <li>kettle-jem-template-20260725-001 - Release pull request branches beginning<br>
+with <code>feature/release</code> now run JRuby and TruffleRuby workflows.</li>
+  <li>kettle-jem-template-20260726-002 - Generated version files now document their<br>
+version namespace and constants, reducing warning-only YARD lint output.</li>
+  <li>kettle-jem-template-20260726-003 - Coverage upload steps now treat Coveralls,<br>
+QLTY, and Codecov as optional, so provider outages do not fail CI when local<br>
+coverage thresholds still pass.</li>
+  <li>kettle-jem-template-20260728-002 - Generated RuboCop configs now ignore the<br>
+same <code>gemfiles/vendor/bundle</code> tree as <code>.gitignore</code>, so vendored dependency<br>
+installs are not reported as project lint debt.</li>
+  <li>kettle-jem-template-20260728-005 - VersionGem bootstrap now creates the<br>
+missing canonical version spec when a project only has shim namespace version<br>
+specs.</li>
+  <li>kettle-jem-template-20260730-001 - Gemspec package file enumeration now runs<br>
+relative to the gemspec directory, so release package contents stay correct<br>
+even when the gemspec is loaded from another working directory.</li>
+  <li>kettle-jem-template-20260801-002 - Generated RSpec helpers now normalize<br>
+managed configuration block bindings structurally, preventing mixed block<br>
+parameter names from producing invalid configuration after a merge.</li>
+  <li>kettle-jem-template-20260801-003 - Generated project metadata and<br>
+documentation now normalize configured underscore hostnames to valid<br>
+hyphenated hostnames.</li>
+  <li>kettle-jem-template-20260801-004 - Generated organization README logos now<br>
+use GitHub’s stable organization avatar endpoint instead of assuming a<br>
+matching Galtzo-hosted asset exists.</li>
+  <li>
+    <p>kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,<br>
+preserving comments and trailing commas during template updates.</p>
+  </li>
+  <li>kettle-jem-template-20260728-003 - Generated dep-heads workflows now run<br>
+TruffleRuby jobs with current RubyGems and Bundler, avoiding setup failures<br>
+before the test suite starts.</li>
+  <li>kettle-jem-template-20260728-004 - Generated dep-heads workflows now use the<br>
+setup-ruby Bundler install path for direct appraisal Gemfiles, avoiding rv<br>
+lockfile parser failures on Git and path dependencies.</li>
+  <li>kettle-jem-template-20260729-001 - Generated JRuby 9.4 workflows now use the<br>
+legacy manual bundle install path, avoiding setup-time Bundler full-index<br>
+failures against <code>gem.coop</code>.</li>
+</ul>
 
 <h2 id="100---2025-05-29">
 <a href="https://gitlab.com/galtzo-floss/shields-badge/-/compare/v1.0.0...v1.0.0">1.0.0</a> - 2025-05-29</h2>
+
 <ul>
-  <li>TAG: <a href="https://gitlab.com/galtzo-floss/shields-badge/-/tags/v1.0.0">v1.0.0</a>
+  <li>TAG: <a href="https://github.com/galtzo-floss/shields-badge/releases/tag/v1.0.0">v1.0.0</a>
 </li>
   <li>Line Coverage: 99.45% (360 / 362)</li>
   <li>Branch Coverage: 94.29% (33 / 35)</li>
-  <li>27.12% documented
-    <h3 id="added-1">Added</h3>
-  </li>
+  <li>27.12% documented</li>
+</ul>
+
+<h3 id="added-2">Added</h3>
+
+<ul>
   <li>Initial release</li>
   <li>Badge: Activity - <code>GithubCommitsSinceLatestRelease</code>
 </li>

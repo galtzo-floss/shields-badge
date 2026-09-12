@@ -5,7 +5,7 @@
   "lib/shields/badge/base.rb:2324042219": [
     [61, 17, 43, "Style/HashSlice: Use `slice(*args_for_dto)` instead.", 1681085889]
   ],
-  "shields-badge.gemspec:1820123022": [
+  "shields-badge.gemspec:1263272294": [
     [22, 32, 8, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (3.2, which may be specified in .rubocop.yml) should be equal.", 484902186]
   ],
   "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:1578763856": [
