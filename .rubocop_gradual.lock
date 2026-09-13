@@ -5,8 +5,10 @@
   "lib/shields/badge/base.rb:2324042219": [
     [61, 17, 43, "Style/HashSlice: Use `slice(*args_for_dto)` instead.", 1681085889]
   ],
-  "shields-badge.gemspec:1263272294": [
-    [22, 32, 8, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (3.2, which may be specified in .rubocop.yml) should be equal.", 484902186]
+  "shields-badge.gemspec:2943642214": [
+    [22, 32, 8, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (3.2, which may be specified in .rubocop.yml) should be equal.", 484902186],
+    [163, 23, 12, "Gemspec/RubyVersionGlobalsUsage: Do not use `RUBY_VERSION` in gemspec file.", 31296028],
+    [171, 23, 12, "Gemspec/RubyVersionGlobalsUsage: Do not use `RUBY_VERSION` in gemspec file.", 31296028]
   ],
   "spec/shields/badge/activity/github_commits_since_latest_release_spec.rb:1578763856": [
     [3, 1, 72, "RSpec/MultipleDescribes: Do not use multiple top-level example groups - try to nest them.", 2636382098]
