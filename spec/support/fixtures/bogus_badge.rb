@@ -16,15 +16,11 @@ class BogusBadge < Shields::Badge::Base
     end
 
     def anchor_href_template
-
       "https:///github.com/%{user}/%{repo}/bogus"
-
     end
 
     def label_text_template
-
       "GitHub Bogus"
-
     end
   end
 end
