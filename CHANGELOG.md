@@ -22,11 +22,17 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
+  which prevented the gem from loading on JRuby.
+
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- Badge classes no longer use endless method definitions, which TruffleRuby 23.1
+  cannot parse, so the gem loads on every supported engine again.
 
 ### Security
 

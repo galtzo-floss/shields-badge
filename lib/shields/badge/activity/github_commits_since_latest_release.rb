@@ -39,11 +39,17 @@ module Shields
         class << self
           # Formatted string specification template
           # See: https://ruby-doc.org/3.4.1/String.html#method-i-25
-          def api_template = "/github/commits-since/%{user}/%{repo}/latest"
+          def api_template
+            "/github/commits-since/%{user}/%{repo}/latest"
+          end
 
-          def anchor_href_template = "https://github.com/%{user}/%{repo}/releases"
+          def anchor_href_template
+            "https://github.com/%{user}/%{repo}/releases"
+          end
 
-          def label_text_template = "%{user}/%{repo} commits since latest release"
+          def label_text_template
+            "%{user}/%{repo} commits since latest release"
+          end
         end
       end
     end

@@ -27,3 +27,10 @@ Layout/IndentationConsistency:
 Naming/FileName:
   Exclude:
     - '**/vHEAD.gemfile'
+# kettle-jem:freeze
+# TruffleRuby 23.x (a supported engine) cannot parse endless method definitions,
+# even though MRI 3.0+ can, so rubocop-lts target versions do not catch them.
+Style/EndlessMethod:
+  Enabled: true
+  EnforcedStyle: disallow
+# kettle-jem:unfreeze
