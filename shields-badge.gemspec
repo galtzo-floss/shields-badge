@@ -100,7 +100,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("castkit", "~> 0.3.0")   # Ruby >= 2.7
+  spec.add_dependency("castkit", "~> 0.4")   # Ruby >= 2.7
   spec.add_dependency("version_gem", ">= 1.1.8", "< 3")   # Ruby >= 2.2
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased

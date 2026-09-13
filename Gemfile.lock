@@ -11,7 +11,7 @@ PATH
   remote: .
   specs:
     shields-badge (1.0.1)
-      castkit (~> 0.3.0)
+      castkit (~> 0.4)
       version_gem (>= 1.1.8, < 3)
 
 GEM
@@ -59,8 +59,10 @@ GEM
     bundler-audit (0.9.3)
       bundler (>= 1.2.0)
       thor (~> 1.0)
-    castkit (0.3.1)
+    castkit (0.4.0)
+      cattri (>= 0.2.3)
       thor
+    cattri (0.2.4)
     cgi (0.5.2)
     citrus (3.0.2)
     citrus-toml-merge (7.1.9)
@@ -664,7 +666,8 @@ CHECKSUMS
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
   bundler (4.0.17) sha256=214e21431b5665dd2f99df8a5511c6b151d7a72e8015c8b38f8b775b61cbb6c1
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
-  castkit (0.3.1) sha256=37c94f6c65731a8555b71449bce59f041c238dc1cf461b6a99c4fb6f40676e54
+  castkit (0.4.0) sha256=3ebb6377e9ed83091c941adf1ccf75dde27096410a7a2ceef0fcc97bd7c06101
+  cattri (0.2.4) sha256=24fa91fe28b15546343fcd250acfd94a12afb0ecbf3d8f11b4c91308287436fd
   cgi (0.5.2) sha256=61ca30298171190fd4fa0d8018e57ada456eae9b7a2b78526debf7f0a0e6f8bb
   citrus (3.0.2) sha256=4ec2412fc389ad186735f4baee1460f7900a8e130ffe3f216b30d4f9c684f650
   citrus-toml-merge (7.1.9) sha256=04354a92f0ff53dfcdbddb33824ced56ded8542f0897bb6230da0a55e6bf53f5

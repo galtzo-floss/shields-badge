@@ -22,6 +22,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
+  which prevented the gem from loading on JRuby.
+
 ### Deprecated
 
 ### Removed
