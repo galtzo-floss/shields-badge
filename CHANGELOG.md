@@ -28,6 +28,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Badge classes no longer use endless method definitions, which TruffleRuby 23.1
+  cannot parse, so the gem loads on every supported engine again.
+
 ### Security
 
 ## [1.0.1] - 2026-09-11

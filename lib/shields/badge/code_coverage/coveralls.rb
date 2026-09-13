@@ -30,11 +30,17 @@ module Shields
         class << self
           # Formatted string specification template
           # See: https://ruby-doc.org/3.4.1/String.html#method-i-25
-          def api_template = "/coverallsCoverage/%{vcs_type}/%{user}/%{repo}"
+          def api_template
+            "/coverallsCoverage/%{vcs_type}/%{user}/%{repo}"
+          end
 
-          def anchor_href_template = "https://github.com/%{user}/%{repo}/actions"
+          def anchor_href_template
+            "https://github.com/%{user}/%{repo}/actions"
+          end
 
-          def label_text_template = "%{user}/%{repo} test coverage"
+          def label_text_template
+            "%{user}/%{repo} test coverage"
+          end
         end
       end
     end

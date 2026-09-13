@@ -25,11 +25,17 @@ module Shields
         class << self
           # Formatted string specification template
           # See: https://ruby-doc.org/3.4.1/String.html#method-i-25
-          def api_template = "/gem/%{period}/%{gem}"
+          def api_template
+            "/gem/%{period}/%{gem}"
+          end
 
-          def anchor_href_template = "https://rubygems.org/gems/%{gem}"
+          def anchor_href_template
+            "https://rubygems.org/gems/%{gem}"
+          end
 
-          def label_text_template = "RubyGems Download Rank"
+          def label_text_template
+            "RubyGems Download Rank"
+          end
         end
       end
     end
