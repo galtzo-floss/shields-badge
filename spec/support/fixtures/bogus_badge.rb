@@ -11,10 +11,20 @@ class BogusBadge < Shields::Badge::Base
   class << self
     # Formatted string specification template
     # See: https://ruby-doc.org/3.4.1/String.html#method-i-25
-    def api_template = "/bogus/%{user}/%{repo}"
+    def api_template
+      "/bogus/%{user}/%{repo}"
+    end
 
-    def anchor_href_template = "https:///github.com/%{user}/%{repo}/bogus"
+    def anchor_href_template
 
-    def label_text_template = "GitHub Bogus"
+      "https:///github.com/%{user}/%{repo}/bogus"
+
+    end
+
+    def label_text_template
+
+      "GitHub Bogus"
+
+    end
   end
 end
