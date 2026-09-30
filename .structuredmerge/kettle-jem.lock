@@ -652,7 +652,7 @@ files:
   CHANGELOG.md:
     recipe: template_source_application_CHANGELOG_md
     action: write
-    dest_sha256: bb92a8abf801de271c06684c620a776d6b0d9d96b20e58c148ec5acf62174a02
+    dest_sha256: 639f61f60ba47243f298aa99649f4053079a9eb088a294c6155d5316e8bcbb6d
     input_fingerprint: 64fd577623f4f777f5d34091d0b1291f88d4c8efd25c6da975efcdd7024d1bba
     template_sources:
     - CHANGELOG.md.example
@@ -1086,7 +1086,7 @@ files:
   shields-badge.gemspec:
     recipe: template_source_application_shields_badge_gemspec
     action: write
-    dest_sha256: d5cab662bb31f19b59bb98cb88e47238d3372ac879b792a9b6dac39e5d1da7e3
+    dest_sha256: ef4e669fa35a21d2b23e8ab638116638da14d5a234f19fe18eac05cfeff3b27f
     input_fingerprint: 6ca25e966ff68de18768aca978c8a42a9b81c543d5667954cca5f26558b60cd8
     template_sources:
     - gem.gemspec.example
