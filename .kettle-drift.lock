@@ -21,8 +21,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        393,
-        410
+        395,
+        412
       ]
     }
   ],
@@ -53,8 +53,8 @@
     {
       "file": "Appraisals",
       "lines": [
-        57,
-        64
+        61,
+        66
       ]
     }
   ],
@@ -62,10 +62,10 @@
     {
       "file": "Appraisals",
       "lines": [
-        69,
-        98,
-        105,
-        111
+        71,
+        100,
+        107,
+        113
       ]
     }
   ],
@@ -73,8 +73,17 @@
     {
       "file": "Appraisals",
       "lines": [
-        84,
-        89
+        86,
+        91
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        43,
+        49
       ]
     }
   ],
@@ -82,8 +91,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        394,
-        411
+        396,
+        413
       ]
     }
   ],

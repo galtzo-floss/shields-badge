@@ -117,7 +117,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 3.1", ">= 3.1.0")             # ruby >= 3.1
+  spec.add_development_dependency("kettle-dev", "~> 3.1", ">= 3.1.5")             # ruby >= 3.1
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
@@ -131,9 +131,9 @@ Gem::Specification.new do |spec|
   # Testing
   # Loads version files in anonymous namespaces for coverage without constant redefinition warnings.
   spec.add_development_dependency("anonymous_loader", "~> 0.1", ">= 0.1.3")         # ruby >= 2.2.0
-  spec.add_development_dependency("appraisal2", "~> 3.2", ">= 3.2.3")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.21")            # ruby >= 3.1
-  spec.add_development_dependency("turbo_tests2", "~> 3.2", ">= 3.2.8")           # ruby >= 2.4.0, default kettle-test runner
+  spec.add_development_dependency("appraisal2", "~> 3.2", ">= 3.2.5")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
+  spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.23")            # ruby >= 3.1
+  spec.add_development_dependency("turbo_tests2", "~> 3.2", ">= 3.2.12")           # ruby >= 2.4.0, default kettle-test runner
 
   # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
@@ -160,15 +160,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")          # ruby >= 2.3.0, for GitLab Test Result Parsing
   spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.14")              # ruby >= 2.3.0, helper for stubbing ENV in specs
   spec.add_development_dependency("rubocop", "~> 1.75", ">= 1.75.5")          # ruby >= 2.7.0, linting tool
-  if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.2")
-    spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2")    # ruby >= 3.2, linting config for strict Ruby >= 3.2 compatibility
-  end
+  spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2")    # ruby >= 3.2, linting config for strict Ruby >= 3.2 compatibility
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # ruby >= 2.7.0, linting config for packaging (e.g., linux distros)
   spec.add_development_dependency("silent_stream", "~> 1.0", ">= 1.0.11")     # ruby >= 2.3.0, for output capture
   spec.add_development_dependency("standard", "~> 1.50")                      # ruby >= 3.0.0, linting tool (primarily used for configs)
   spec.add_development_dependency("timecop", "~> 0.9", ">= 0.9.10")           # ruby >= 1.9.2, for time-based testing
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")              # Ruby >= 0, YARD Ruby source code documentation generator
-  if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.2")
-    spec.add_development_dependency("yard-relative_markdown_links", "~> 0.6") # ruby >= 3.2, YARD plugin for relative Markdown links
-  end
+  spec.add_development_dependency("yard-relative_markdown_links", "~> 0.6") # ruby >= 3.2, YARD plugin for relative Markdown links
 end

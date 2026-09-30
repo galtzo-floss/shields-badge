@@ -20,10 +20,26 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- kettle-jem-template-20260913-001 - Templating now also surfaces a review
+  entry in `dependency_conflicts.resolve` when a direct development
+  dependency doesn't support one or more of this project's declared
+  `engines:` and has no template-managed modular home (e.g. `sqlite3` on
+  `jruby`). Review each entry and pick a resolution per the project's own
+  engine support needs.
+
 ### Changed
 
 - Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
   which prevented the gem from loading on JRuby.
+
+- [kc] kettle-jem/prepare: updated 16 project files:
+  - dependencies (16)
+
+- [kc] kettle-jem/template: updated 30 project files:
+  - code and tests (1)
+  - dependencies (5)
+  - other (2)
+  - workflows (22)
 
 ### Deprecated
 
