@@ -20,26 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- kettle-jem-template-20260913-001 - Templating now also surfaces a review
-  entry in `dependency_conflicts.resolve` when a direct development
-  dependency doesn't support one or more of this project's declared
-  `engines:` and has no template-managed modular home (e.g. `sqlite3` on
-  `jruby`). Review each entry and pick a resolution per the project's own
-  engine support needs.
-
 ### Changed
-
-- Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
-  which prevented the gem from loading on JRuby.
-
-- [kc] kettle-jem/prepare: updated 16 project files:
-  - dependencies (16)
-
-- [kc] kettle-jem/template: updated 30 project files:
-  - code and tests (1)
-  - dependencies (5)
-  - other (2)
-  - workflows (22)
 
 ### Deprecated
 
@@ -47,15 +28,12 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Badge classes no longer use endless method definitions, which TruffleRuby 23.1
-  cannot parse, so the gem loads on every supported engine again.
-
 ### Security
 
-## [1.0.1] - 2026-09-11
+## [1.0.1] - 2026-10-01
 
 - TAG: [v1.0.1][1.0.1t]
-- COVERAGE: 99.45% -- 361/363 lines in 24 files
+- COVERAGE: 99.48% -- 379/381 lines in 24 files
 - BRANCH COVERAGE: 94.29% -- 33/35 branches in 24 files
 - 29.41% documented
 
@@ -68,6 +46,13 @@ Please file a bug if you notice a violation of semantic versioning.
   before generated docs are refreshed.
 - kettle-jem-template-20260727-001 - Spec harness documentation now lists the
   RSpec helpers provided by `kettle-test`.
+
+- kettle-jem-template-20260913-001 - Templating now also surfaces a review
+  entry in `dependency_conflicts.resolve` when a direct development
+  dependency doesn't support one or more of this project's declared
+  `engines:` and has no template-managed modular home (e.g. `sqlite3` on
+  `jruby`). Review each entry and pick a resolution per the project's own
+  engine support needs.
 
 ### Changed
 
@@ -84,12 +69,15 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
-- [kc] kettle-jem/prepare: updated 10 project files:
+- [kc] kettle-jem/prepare: updated 26 project files:
+  - dependencies (26)
+- [kc] kettle-jem/template: updated 36 project files:
+  - code and tests (1)
   - dependencies (10)
-
-- [kc] kettle-jem/template: updated 6 project files:
-  - dependencies (5)
-  - other (1)
+  - other (3)
+  - workflows (22)
+- Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
+  which prevented the gem from loading on JRuby.
 
 ### Fixed
 
@@ -134,6 +122,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260729-001 - Generated JRuby 9.4 workflows now use the
   legacy manual bundle install path, avoiding setup-time Bundler full-index
   failures against `gem.coop`.
+
+- Badge classes no longer use endless method definitions, which TruffleRuby 23.1
+  cannot parse, so the gem loads on every supported engine again.
 
 ## [1.0.0] - 2025-05-29
 
