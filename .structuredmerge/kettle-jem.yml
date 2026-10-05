@@ -140,7 +140,7 @@ dependency_conflicts:
       direct: shields-badge.gemspec
       modular: gemfiles/modular/style.gemfile
       action: keep_both
-      reason: "The direct and modular RuboCop Packaging ranges are identical."
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
     - gem: standard
       direct: shields-badge.gemspec
       modular: gemfiles/modular/style.gemfile
