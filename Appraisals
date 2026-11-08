@@ -58,7 +58,6 @@ end
 
 appraise "head" do
   eval_gemfile "modular/x_std_libs.gemfile"
-  eval_gemfile "modular/runtime_heads.gemfile"
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
