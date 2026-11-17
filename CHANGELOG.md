@@ -22,17 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 27 project files:
-  - configuration (2)
-  - dependencies (25)
-
-- [kc] kettle-jem/template: updated 40 project files:
-  - code and tests (2)
-  - dependencies (9)
-  - documentation (2)
-  - other (4)
-  - workflows (23)
-
 ### Deprecated
 
 ### Removed
@@ -41,7 +30,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
-## [1.0.1] - 2026-10-01
+## [1.0.1] - 2026-11-17
 
 - TAG: [v1.0.1][1.0.1t]
 - COVERAGE: 99.48% -- 379/381 lines in 24 files
@@ -80,13 +69,15 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
-- [kc] kettle-jem/prepare: updated 26 project files:
-  - dependencies (26)
-- [kc] kettle-jem/template: updated 36 project files:
-  - code and tests (1)
-  - dependencies (10)
-  - other (3)
-  - workflows (22)
+- [kc] kettle-jem/prepare: updated 53 project files:
+  - configuration (2)
+  - dependencies (51)
+- [kc] kettle-jem/template: updated 76 project files:
+  - code and tests (3)
+  - dependencies (19)
+  - documentation (2)
+  - other (7)
+  - workflows (45)
 - Require castkit ~> 0.4. castkit 0.3 overrides `Class#hash` on data objects,
   which prevented the gem from loading on JRuby.
 
