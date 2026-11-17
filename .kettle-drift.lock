@@ -76,7 +76,17 @@
       ]
     }
   ],
-  "eval_gemfile \"modular/rspec_junit_formatter/r2/v0.6.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
+  "eval_gemfile \"modular/rspec.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
+    {
+      "file": "Appraisals",
+      "lines": [
+        61,
+        72,
+        96
+      ]
+    }
+  ],
+  "eval_gemfile \"modular/rspec_junit_formatter/r3.2/v0.6.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
     {
       "file": "Appraisals",
       "lines": [
@@ -85,23 +95,13 @@
       ]
     }
   ],
-  "eval_gemfile \"modular/rspec_junit_formatter/r3.3/v0.8.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
-    {
-      "file": "Appraisals",
-      "lines": [
-        61,
-        72,
-        95
-      ]
-    }
-  ],
   "eval_gemfile \"modular/x_std_libs.gemfile\"\nremove_gem \"appraisal\" # only present because it must be in the gemfile because we target a git branch": [
     {
       "file": "Appraisals",
       "lines": [
-        105,
-        112,
-        118
+        107,
+        114,
+        120
       ]
     }
   ],
