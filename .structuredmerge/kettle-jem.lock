@@ -40,7 +40,6 @@ template_state:
     - ".git-hooks/commit-subjects-goalie.txt"
     - ".github/workflows/auto-assign.yml"
     - ".github/workflows/coverage.yml"
-    - ".github/workflows/current-runtime-heads.yml"
     - ".github/workflows/current.yml"
     - ".github/workflows/dep-heads.yml"
     - ".github/workflows/heads.yml"
