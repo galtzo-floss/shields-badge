@@ -130,7 +130,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rake", "~> 13.0")                                # ruby >= 2.2.0
 
   # Debugging
-  spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.4")            # ruby >= 2.2.0
+  spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.5")            # ruby >= 2.2.0
 
   # Testing
   # Loads version files in anonymous namespaces for coverage without constant redefinition warnings.
@@ -148,7 +148,7 @@ Gem::Specification.new do |spec|
   # This means we have no choice but to use the erb that shipped with Ruby 2.3
   # /opt/hostedtoolcache/Ruby/2.3.8/x64/lib/ruby/gems/2.3.0/gems/erb-2.2.2/lib/erb.rb:670:in `prepare_trim_mode': undefined method `match?' for "-":String (NoMethodError)
   # spec.add_development_dependency("erb", ">= 2.2")                                  # ruby >= 2.3.0, not SemVer, old rubies get dropped in a patch.
-  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.16")            # ruby >= 2.4
+  spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.17")            # ruby >= 2.4
 
   # HTTP recording for deterministic specs
   # In Ruby 3.5 (HEAD) the CGI library has been pared down, so we also need to depend on gem "cgi" for ruby@head
@@ -168,7 +168,7 @@ Gem::Specification.new do |spec|
   # line); the scaffold's gemspec entry (~> 24.0 requires Ruby >= 3.2) broke
   # Appraisal.root.gemfile resolution on the ruby-3.1 CI lane.
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # ruby >= 2.7.0, linting config for packaging (e.g., linux distros)
-  spec.add_development_dependency("silent_stream", "~> 1.0", ">= 1.0.11")     # ruby >= 2.3.0, for output capture
+  spec.add_development_dependency("silent_stream", "~> 1.0", ">= 1.0.13")     # ruby >= 2.3.0, for output capture
   spec.add_development_dependency("standard", "~> 1.50")                      # ruby >= 3.0.0, linting tool (primarily used for configs)
   spec.add_development_dependency("timecop", "~> 0.9", ">= 0.9.10")           # ruby >= 1.9.2, for time-based testing
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")              # Ruby >= 0, YARD Ruby source code documentation generator
