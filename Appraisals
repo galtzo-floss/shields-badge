@@ -93,14 +93,12 @@ end
 appraise "ruby-3-3" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/rspec_junit_formatter/r3/v0.8.gemfile"
-  eval_gemfile "modular/rspec.gemfile"
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
 appraise "ruby-3-4" do
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
   eval_gemfile "modular/rspec_junit_formatter/r3/v0.8.gemfile"
-  eval_gemfile "modular/rspec.gemfile"
 end
 
 appraise "audit" do
