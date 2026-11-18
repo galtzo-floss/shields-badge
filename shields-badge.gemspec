@@ -164,7 +164,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")          # ruby >= 2.3.0, for GitLab Test Result Parsing
   spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.19")              # ruby >= 2.3.0, helper for stubbing ENV in specs
   spec.add_development_dependency("rubocop", "~> 1.75", ">= 1.75.5")          # ruby >= 2.7.0, linting tool
-  spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2")    # ruby >= 3.2, linting config for strict Ruby >= 3.2 compatibility
+  # rubocop-lts lives in gemfiles/modular/style.gemfile (22.x, the Ruby 3.1
+  # line); the scaffold's gemspec entry (~> 24.0 requires Ruby >= 3.2) broke
+  # Appraisal.root.gemfile resolution on the ruby-3.1 CI lane.
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")  # ruby >= 2.7.0, linting config for packaging (e.g., linux distros)
   spec.add_development_dependency("silent_stream", "~> 1.0", ">= 1.0.11")     # ruby >= 2.3.0, for output capture
   spec.add_development_dependency("standard", "~> 1.50")                      # ruby >= 3.0.0, linting tool (primarily used for configs)

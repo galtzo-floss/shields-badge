@@ -26,6 +26,8 @@ platform :mri do
       github: "pboling/rubocop-packaging",
       ref: "3539ba858d379740d638566faee9e56b2b854145"
     declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
+    # rubocop-lts 22.3+/24.x requires Ruby >= 3.2; 22.2.x is the newest supporting Ruby 3.1
+    gem "rubocop-lts", "~> 22.2.0" unless declared_gems.include?("rubocop-lts")
     gem "rubocop-lts-rspec", "~> 1.0", ">= 1.0.8" unless declared_gems.include?("rubocop-lts-rspec")
     gem "rubocop-ruby3_1", "~> 3.0", ">= 3.0.7" unless declared_gems.include?("rubocop-ruby3_1")
   else
